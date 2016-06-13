@@ -1,4 +1,6 @@
-﻿namespace QuanLyThuVien.v1
+﻿using System.Windows.Forms;
+
+namespace QuanLyThuVien.v1
 {
     partial class FormBookManage
     {
@@ -51,7 +53,7 @@
             this.textBoxBookCost = new System.Windows.Forms.TextBox();
             this.textBoxPublishHouse = new System.Windows.Forms.TextBox();
             this.textBoxLangID = new System.Windows.Forms.TextBox();
-            this.textBoxBookType = new System.Windows.Forms.TextBox();
+            this.textBoxBookTypeID = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -73,9 +75,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(201, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã sách ";
+            this.label1.Text = "Mã đầu sách ";
             // 
             // pictureBoxBookCover
             // 
@@ -84,6 +86,7 @@
             this.pictureBoxBookCover.Size = new System.Drawing.Size(134, 162);
             this.pictureBoxBookCover.TabIndex = 1;
             this.pictureBoxBookCover.TabStop = false;
+            this.pictureBoxBookCover.DoubleClick += new System.EventHandler(this.pictureBoxBookCover_DoubleClick);
             // 
             // label2
             // 
@@ -153,9 +156,11 @@
             // 
             // dateTimePickerBookPublish
             // 
+            this.dateTimePickerBookPublish.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerBookPublish.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerBookPublish.Location = new System.Drawing.Point(295, 192);
             this.dateTimePickerBookPublish.Name = "dateTimePickerBookPublish";
-            this.dateTimePickerBookPublish.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerBookPublish.Size = new System.Drawing.Size(170, 20);
             this.dateTimePickerBookPublish.TabIndex = 10;
             // 
             // label6
@@ -247,12 +252,12 @@
             this.textBoxLangID.Size = new System.Drawing.Size(146, 20);
             this.textBoxLangID.TabIndex = 21;
             // 
-            // textBoxBookType
+            // textBoxBookTypeID
             // 
-            this.textBoxBookType.Location = new System.Drawing.Point(654, 175);
-            this.textBoxBookType.Name = "textBoxBookType";
-            this.textBoxBookType.Size = new System.Drawing.Size(146, 20);
-            this.textBoxBookType.TabIndex = 22;
+            this.textBoxBookTypeID.Location = new System.Drawing.Point(654, 175);
+            this.textBoxBookTypeID.Name = "textBoxBookTypeID";
+            this.textBoxBookTypeID.Size = new System.Drawing.Size(146, 20);
+            this.textBoxBookTypeID.TabIndex = 22;
             // 
             // dataGridView1
             // 
@@ -261,6 +266,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(920, 189);
             this.dataGridView1.TabIndex = 23;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label12
             // 
@@ -386,7 +393,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBoxBookType);
+            this.Controls.Add(this.textBoxBookTypeID);
             this.Controls.Add(this.textBoxLangID);
             this.Controls.Add(this.textBoxPublishHouse);
             this.Controls.Add(this.textBoxBookCost);
@@ -444,7 +451,7 @@
         private System.Windows.Forms.TextBox textBoxBookCost;
         private System.Windows.Forms.TextBox textBoxPublishHouse;
         private System.Windows.Forms.TextBox textBoxLangID;
-        private System.Windows.Forms.TextBox textBoxBookType;
+        private System.Windows.Forms.TextBox textBoxBookTypeID;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;

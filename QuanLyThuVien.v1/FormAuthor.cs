@@ -18,7 +18,20 @@ namespace QuanLyThuVien.v1
             InitializeComponent();
         }
 
-        private void FormAuthor_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            this.ControlBox = false;
+            this.WindowState = FormWindowState.Maximized;
+            this.BringToFront();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FormAuthor_Load_1(object sender, EventArgs e)
         {
             try
             {
@@ -53,17 +66,12 @@ namespace QuanLyThuVien.v1
 
         }
 
-        protected override void OnLoad(EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            base.OnLoad(e);
-            this.ControlBox = false;
-            this.WindowState = FormWindowState.Maximized;
-            this.BringToFront();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            textBoxAuthorID.Text = dataGridView1.CurrentRow.Cells["MATACGIA"].Value.ToString();
+            textBoxAuthorName.Text = dataGridView1.CurrentRow.Cells["HOTENTG"].Value.ToString();
+            textBoxAuthorAddress.Text = dataGridView1.CurrentRow.Cells["DIACHITG"].Value.ToString();
+            textBoxAuthorPhone.Text = dataGridView1.CurrentRow.Cells["DIENTHOAITG"].Value.ToString();
         }
     }
 }

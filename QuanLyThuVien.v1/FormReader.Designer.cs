@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReader));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxReaderID = new System.Windows.Forms.TextBox();
+            this.textBoxReaderFirstname = new System.Windows.Forms.TextBox();
+            this.textBoxReaderLastname = new System.Windows.Forms.TextBox();
+            this.textBoxReaderEmail = new System.Windows.Forms.TextBox();
+            this.textBoxReaderNumberID = new System.Windows.Forms.TextBox();
+            this.textBoxReaderPhone = new System.Windows.Forms.TextBox();
+            this.textBoxReaderAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,11 +53,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.radioButtonActive = new System.Windows.Forms.RadioButton();
+            this.radioButtonUnActive = new System.Windows.Forms.RadioButton();
+            this.dateTimePickerReaderBirth = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerBeginDay = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerEndDay = new System.Windows.Forms.DateTimePicker();
             this.buttonDeleteReader = new System.Windows.Forms.Button();
             this.buttonSaveReader = new System.Windows.Forms.Button();
             this.buttonReaderEdit = new System.Windows.Forms.Button();
@@ -67,9 +68,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.qLTVDataSet = new QuanLyThuVien.v1.QLTVDataSet();
+            this.iSBNBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iSBNTableAdapter = new QuanLyThuVien.v1.QLTVDataSetTableAdapters.ISBNTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTVDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iSBNBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -117,54 +123,54 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Số CMND";
             // 
-            // textBox1
+            // textBoxReaderID
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxReaderID.Location = new System.Drawing.Point(202, 11);
+            this.textBoxReaderID.Name = "textBoxReaderID";
+            this.textBoxReaderID.Size = new System.Drawing.Size(146, 20);
+            this.textBoxReaderID.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxReaderFirstname
             // 
-            this.textBox2.Location = new System.Drawing.Point(202, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBoxReaderFirstname.Location = new System.Drawing.Point(202, 38);
+            this.textBoxReaderFirstname.Name = "textBoxReaderFirstname";
+            this.textBoxReaderFirstname.Size = new System.Drawing.Size(146, 20);
+            this.textBoxReaderFirstname.TabIndex = 6;
             // 
-            // textBox3
+            // textBoxReaderLastname
             // 
-            this.textBox3.Location = new System.Drawing.Point(202, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 20);
-            this.textBox3.TabIndex = 7;
+            this.textBoxReaderLastname.Location = new System.Drawing.Point(202, 67);
+            this.textBoxReaderLastname.Name = "textBoxReaderLastname";
+            this.textBoxReaderLastname.Size = new System.Drawing.Size(146, 20);
+            this.textBoxReaderLastname.TabIndex = 7;
             // 
-            // textBox4
+            // textBoxReaderEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(202, 98);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(146, 20);
-            this.textBox4.TabIndex = 8;
+            this.textBoxReaderEmail.Location = new System.Drawing.Point(202, 98);
+            this.textBoxReaderEmail.Name = "textBoxReaderEmail";
+            this.textBoxReaderEmail.Size = new System.Drawing.Size(146, 20);
+            this.textBoxReaderEmail.TabIndex = 8;
             // 
-            // textBox5
+            // textBoxReaderNumberID
             // 
-            this.textBox5.Location = new System.Drawing.Point(202, 130);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(146, 20);
-            this.textBox5.TabIndex = 9;
+            this.textBoxReaderNumberID.Location = new System.Drawing.Point(202, 130);
+            this.textBoxReaderNumberID.Name = "textBoxReaderNumberID";
+            this.textBoxReaderNumberID.Size = new System.Drawing.Size(146, 20);
+            this.textBoxReaderNumberID.TabIndex = 9;
             // 
-            // textBox9
+            // textBoxReaderPhone
             // 
-            this.textBox9.Location = new System.Drawing.Point(520, 65);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(146, 20);
-            this.textBox9.TabIndex = 16;
+            this.textBoxReaderPhone.Location = new System.Drawing.Point(520, 65);
+            this.textBoxReaderPhone.Name = "textBoxReaderPhone";
+            this.textBoxReaderPhone.Size = new System.Drawing.Size(146, 20);
+            this.textBoxReaderPhone.TabIndex = 16;
             // 
-            // textBox10
+            // textBoxReaderAddress
             // 
-            this.textBox10.Location = new System.Drawing.Point(520, 38);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(146, 20);
-            this.textBox10.TabIndex = 15;
+            this.textBoxReaderAddress.Location = new System.Drawing.Point(520, 38);
+            this.textBoxReaderAddress.Name = "textBoxReaderAddress";
+            this.textBoxReaderAddress.Size = new System.Drawing.Size(146, 20);
+            this.textBoxReaderAddress.TabIndex = 15;
             // 
             // label6
             // 
@@ -263,55 +269,61 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.radioButtonActive);
+            this.panel2.Controls.Add(this.radioButtonUnActive);
             this.panel2.Location = new System.Drawing.Point(520, 156);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(146, 24);
             this.panel2.TabIndex = 35;
             // 
-            // radioButton1
+            // radioButtonActive
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(14, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(38, 17);
-            this.radioButton1.TabIndex = 32;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Có";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonActive.AutoSize = true;
+            this.radioButtonActive.Location = new System.Drawing.Point(14, 5);
+            this.radioButtonActive.Name = "radioButtonActive";
+            this.radioButtonActive.Size = new System.Drawing.Size(38, 17);
+            this.radioButtonActive.TabIndex = 32;
+            this.radioButtonActive.TabStop = true;
+            this.radioButtonActive.Text = "Có";
+            this.radioButtonActive.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonUnActive
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(94, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(56, 17);
-            this.radioButton2.TabIndex = 33;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Không";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonUnActive.AutoSize = true;
+            this.radioButtonUnActive.Location = new System.Drawing.Point(94, 5);
+            this.radioButtonUnActive.Name = "radioButtonUnActive";
+            this.radioButtonUnActive.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonUnActive.TabIndex = 33;
+            this.radioButtonUnActive.TabStop = true;
+            this.radioButtonUnActive.Text = "Không";
+            this.radioButtonUnActive.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dateTimePickerReaderBirth
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(520, 11);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 36;
+            this.dateTimePickerReaderBirth.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerReaderBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerReaderBirth.Location = new System.Drawing.Point(520, 11);
+            this.dateTimePickerReaderBirth.Name = "dateTimePickerReaderBirth";
+            this.dateTimePickerReaderBirth.Size = new System.Drawing.Size(146, 20);
+            this.dateTimePickerReaderBirth.TabIndex = 36;
             // 
-            // dateTimePicker2
+            // dateTimePickerBeginDay
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(520, 93);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 37;
+            this.dateTimePickerBeginDay.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerBeginDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerBeginDay.Location = new System.Drawing.Point(520, 93);
+            this.dateTimePickerBeginDay.Name = "dateTimePickerBeginDay";
+            this.dateTimePickerBeginDay.Size = new System.Drawing.Size(146, 20);
+            this.dateTimePickerBeginDay.TabIndex = 37;
             // 
-            // dateTimePicker3
+            // dateTimePickerEndDay
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(520, 122);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 38;
+            this.dateTimePickerEndDay.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerEndDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerEndDay.Location = new System.Drawing.Point(520, 122);
+            this.dateTimePickerEndDay.Name = "dateTimePickerEndDay";
+            this.dateTimePickerEndDay.Size = new System.Drawing.Size(146, 20);
+            this.dateTimePickerEndDay.TabIndex = 38;
             // 
             // buttonDeleteReader
             // 
@@ -359,11 +371,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 295);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(782, 211);
+            this.dataGridView1.Size = new System.Drawing.Size(991, 211);
             this.dataGridView1.TabIndex = 43;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // buttonCancel
             // 
@@ -413,11 +428,25 @@
             this.label12.TabIndex = 44;
             this.label12.Text = "Tìm kiếm";
             // 
+            // qLTVDataSet
+            // 
+            this.qLTVDataSet.DataSetName = "QLTVDataSet";
+            this.qLTVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // iSBNBindingSource
+            // 
+            this.iSBNBindingSource.DataMember = "ISBN";
+            this.iSBNBindingSource.DataSource = this.qLTVDataSet;
+            // 
+            // iSBNTableAdapter
+            // 
+            this.iSBNTableAdapter.ClearBeforeFill = true;
+            // 
             // FormReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 518);
+            this.ClientSize = new System.Drawing.Size(1016, 518);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSearchReader);
             this.Controls.Add(this.comboBox1);
@@ -428,25 +457,25 @@
             this.Controls.Add(this.buttonSaveReader);
             this.Controls.Add(this.buttonReaderEdit);
             this.Controls.Add(this.buttonAddReader);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerEndDay);
+            this.Controls.Add(this.dateTimePickerBeginDay);
+            this.Controls.Add(this.dateTimePickerReaderBirth);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBoxReaderPhone);
+            this.Controls.Add(this.textBoxReaderAddress);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxReaderNumberID);
+            this.Controls.Add(this.textBoxReaderEmail);
+            this.Controls.Add(this.textBoxReaderLastname);
+            this.Controls.Add(this.textBoxReaderFirstname);
+            this.Controls.Add(this.textBoxReaderID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -455,11 +484,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormReader";
             this.Text = "FormReader";
+            this.Load += new System.EventHandler(this.FormReader_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTVDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iSBNBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,13 +504,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxReaderID;
+        private System.Windows.Forms.TextBox textBoxReaderFirstname;
+        private System.Windows.Forms.TextBox textBoxReaderLastname;
+        private System.Windows.Forms.TextBox textBoxReaderEmail;
+        private System.Windows.Forms.TextBox textBoxReaderNumberID;
+        private System.Windows.Forms.TextBox textBoxReaderPhone;
+        private System.Windows.Forms.TextBox textBoxReaderAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -490,11 +522,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.RadioButton radioButtonActive;
+        private System.Windows.Forms.RadioButton radioButtonUnActive;
+        private System.Windows.Forms.DateTimePicker dateTimePickerReaderBirth;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBeginDay;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEndDay;
         private System.Windows.Forms.Button buttonDeleteReader;
         private System.Windows.Forms.Button buttonSaveReader;
         private System.Windows.Forms.Button buttonReaderEdit;
@@ -505,5 +537,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label label12;
+        private QLTVDataSet qLTVDataSet;
+        private System.Windows.Forms.BindingSource iSBNBindingSource;
+        private QLTVDataSetTableAdapters.ISBNTableAdapter iSBNTableAdapter;
     }
 }

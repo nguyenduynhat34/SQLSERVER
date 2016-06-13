@@ -63,5 +63,31 @@ namespace QuanLyThuVien.v1
                     "valid for your system.");
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxBookID.Text = dataGridView1.CurrentRow.Cells["ISBN"].Value.ToString();
+            textBoxBookName.Text = dataGridView1.CurrentRow.Cells["TENSACH"].Value.ToString();
+            textBoxBookSize.Text = dataGridView1.CurrentRow.Cells["KHOSACH"].Value.ToString();
+            textBoxBookContent.Text = dataGridView1.CurrentRow.Cells["NOIDUNG"].Value.ToString();
+            textBoxPublishTime.Text = dataGridView1.CurrentRow.Cells["LANXUATBAN"].Value.ToString();
+            textBoxBookPages.Text = dataGridView1.CurrentRow.Cells["SOTRANG"].Value.ToString();
+            textBoxBookCost.Text = dataGridView1.CurrentRow.Cells["GIA"].Value.ToString();
+            textBoxPublishHouse.Text = dataGridView1.CurrentRow.Cells["NHAXB"].Value.ToString();
+            textBoxLangID.Text = dataGridView1.CurrentRow.Cells["MANGONNGU"].Value.ToString();
+            textBoxBookTypeID.Text = dataGridView1.CurrentRow.Cells["MATL"].Value.ToString();
+        }
+
+        private void pictureBoxBookCover_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
