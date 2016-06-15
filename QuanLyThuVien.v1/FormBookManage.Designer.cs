@@ -32,7 +32,6 @@ namespace QuanLyThuVien.v1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBookManage));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBoxBookCover = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,16 +57,17 @@ namespace QuanLyThuVien.v1
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonSearchBook = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonAddBook = new System.Windows.Forms.Button();
-            this.buttonBookEdit = new System.Windows.Forms.Button();
-            this.buttonSaveBook = new System.Windows.Forms.Button();
-            this.buttonDeleteBook = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookCover)).BeginInit();
+            this.buttonDeleteBook = new System.Windows.Forms.Button();
+            this.buttonSaveBook = new System.Windows.Forms.Button();
+            this.buttonBookEdit = new System.Windows.Forms.Button();
+            this.buttonAddBook = new System.Windows.Forms.Button();
+            this.buttonSearchBook = new System.Windows.Forms.Button();
+            this.pictureBoxBookCover = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookCover)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,15 +78,6 @@ namespace QuanLyThuVien.v1
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã đầu sách ";
-            // 
-            // pictureBoxBookCover
-            // 
-            this.pictureBoxBookCover.Location = new System.Drawing.Point(22, 13);
-            this.pictureBoxBookCover.Name = "pictureBoxBookCover";
-            this.pictureBoxBookCover.Size = new System.Drawing.Size(134, 162);
-            this.pictureBoxBookCover.TabIndex = 1;
-            this.pictureBoxBookCover.TabStop = false;
-            this.pictureBoxBookCover.DoubleClick += new System.EventHandler(this.pictureBoxBookCover_DoubleClick);
             // 
             // label2
             // 
@@ -296,17 +287,6 @@ namespace QuanLyThuVien.v1
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 26;
             // 
-            // buttonSearchBook
-            // 
-            this.buttonSearchBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchBook.Image")));
-            this.buttonSearchBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearchBook.Location = new System.Drawing.Point(634, 280);
-            this.buttonSearchBook.Name = "buttonSearchBook";
-            this.buttonSearchBook.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearchBook.TabIndex = 27;
-            this.buttonSearchBook.Text = "  Tìm kiếm";
-            this.buttonSearchBook.UseVisualStyleBackColor = true;
-            // 
             // buttonCancel
             // 
             this.buttonCancel.Location = new System.Drawing.Point(725, 280);
@@ -315,50 +295,6 @@ namespace QuanLyThuVien.v1
             this.buttonCancel.TabIndex = 28;
             this.buttonCancel.Text = "Hủy";
             this.buttonCancel.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddBook
-            // 
-            this.buttonAddBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddBook.Image")));
-            this.buttonAddBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAddBook.Location = new System.Drawing.Point(178, 232);
-            this.buttonAddBook.Name = "buttonAddBook";
-            this.buttonAddBook.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddBook.TabIndex = 29;
-            this.buttonAddBook.Text = "   Thêm";
-            this.buttonAddBook.UseVisualStyleBackColor = true;
-            // 
-            // buttonBookEdit
-            // 
-            this.buttonBookEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonBookEdit.Image")));
-            this.buttonBookEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBookEdit.Location = new System.Drawing.Point(304, 232);
-            this.buttonBookEdit.Name = "buttonBookEdit";
-            this.buttonBookEdit.Size = new System.Drawing.Size(75, 23);
-            this.buttonBookEdit.TabIndex = 30;
-            this.buttonBookEdit.Text = "Sửa";
-            this.buttonBookEdit.UseVisualStyleBackColor = true;
-            // 
-            // buttonSaveBook
-            // 
-            this.buttonSaveBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveBook.Image")));
-            this.buttonSaveBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveBook.Location = new System.Drawing.Point(436, 232);
-            this.buttonSaveBook.Name = "buttonSaveBook";
-            this.buttonSaveBook.Size = new System.Drawing.Size(75, 23);
-            this.buttonSaveBook.TabIndex = 31;
-            this.buttonSaveBook.Text = "Lưu";
-            this.buttonSaveBook.UseVisualStyleBackColor = true;
-            // 
-            // buttonDeleteBook
-            // 
-            this.buttonDeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteBook.Image")));
-            this.buttonDeleteBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDeleteBook.Location = new System.Drawing.Point(759, 232);
-            this.buttonDeleteBook.Name = "buttonDeleteBook";
-            this.buttonDeleteBook.Size = new System.Drawing.Size(75, 23);
-            this.buttonDeleteBook.TabIndex = 32;
-            this.buttonDeleteBook.Text = "Xóa";
-            this.buttonDeleteBook.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -375,6 +311,72 @@ namespace QuanLyThuVien.v1
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(170, 20);
             this.textBox2.TabIndex = 34;
+            // 
+            // buttonDeleteBook
+            // 
+            this.buttonDeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteBook.Image")));
+            this.buttonDeleteBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDeleteBook.Location = new System.Drawing.Point(759, 232);
+            this.buttonDeleteBook.Name = "buttonDeleteBook";
+            this.buttonDeleteBook.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeleteBook.TabIndex = 32;
+            this.buttonDeleteBook.Text = "Xóa";
+            this.buttonDeleteBook.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveBook
+            // 
+            this.buttonSaveBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveBook.Image")));
+            this.buttonSaveBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveBook.Location = new System.Drawing.Point(436, 232);
+            this.buttonSaveBook.Name = "buttonSaveBook";
+            this.buttonSaveBook.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveBook.TabIndex = 31;
+            this.buttonSaveBook.Text = "Lưu";
+            this.buttonSaveBook.UseVisualStyleBackColor = true;
+            // 
+            // buttonBookEdit
+            // 
+            this.buttonBookEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonBookEdit.Image")));
+            this.buttonBookEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBookEdit.Location = new System.Drawing.Point(304, 232);
+            this.buttonBookEdit.Name = "buttonBookEdit";
+            this.buttonBookEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonBookEdit.TabIndex = 30;
+            this.buttonBookEdit.Text = "Sửa";
+            this.buttonBookEdit.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddBook
+            // 
+            this.buttonAddBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddBook.Image")));
+            this.buttonAddBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddBook.Location = new System.Drawing.Point(178, 232);
+            this.buttonAddBook.Name = "buttonAddBook";
+            this.buttonAddBook.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddBook.TabIndex = 29;
+            this.buttonAddBook.Text = "   Thêm";
+            this.buttonAddBook.UseVisualStyleBackColor = true;
+            // 
+            // buttonSearchBook
+            // 
+            this.buttonSearchBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchBook.Image")));
+            this.buttonSearchBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSearchBook.Location = new System.Drawing.Point(634, 280);
+            this.buttonSearchBook.Name = "buttonSearchBook";
+            this.buttonSearchBook.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchBook.TabIndex = 27;
+            this.buttonSearchBook.Text = "  Tìm kiếm";
+            this.buttonSearchBook.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxBookCover
+            // 
+            this.pictureBoxBookCover.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBoxBookCover.Location = new System.Drawing.Point(22, 13);
+            this.pictureBoxBookCover.Name = "pictureBoxBookCover";
+            this.pictureBoxBookCover.Size = new System.Drawing.Size(134, 162);
+            this.pictureBoxBookCover.TabIndex = 1;
+            this.pictureBoxBookCover.TabStop = false;
+            this.pictureBoxBookCover.DoubleClick += new System.EventHandler(this.pictureBoxBookCover_DoubleClick);
+            this.pictureBoxBookCover.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // FormBookManage
             // 
@@ -420,8 +422,8 @@ namespace QuanLyThuVien.v1
             this.Name = "FormBookManage";
             this.Text = "Quản lý sách";
             this.Load += new System.EventHandler(this.FormBookManage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookCover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookCover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

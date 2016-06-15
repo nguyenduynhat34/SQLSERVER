@@ -35,6 +35,7 @@
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
             this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
@@ -45,7 +46,6 @@
             this.ribbon1 = new System.Windows.Forms.Ribbon();
             this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
             this.ribbonSeparator3 = new System.Windows.Forms.RibbonSeparator();
-            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
             this.menuHome = new System.Windows.Forms.RibbonOrbMenuItem();
             this.menuInfo = new System.Windows.Forms.RibbonOrbMenuItem();
             this.menuManage = new System.Windows.Forms.RibbonOrbMenuItem();
@@ -117,6 +117,12 @@
             this.ribbonPanel2.Items.Add(this.buttonReader);
             this.ribbonPanel2.Tag = null;
             this.ribbonPanel2.Text = "Độc giả";
+            // 
+            // ribbonPanel7
+            // 
+            this.ribbonPanel7.Items.Add(this.buttonSingleBook);
+            this.ribbonPanel7.Tag = null;
+            this.ribbonPanel7.Text = "Sách";
             // 
             // ribbonTab2
             // 
@@ -247,12 +253,6 @@
             this.ribbonSeparator3.ToolTip = null;
             this.ribbonSeparator3.ToolTipTitle = null;
             this.ribbonSeparator3.Value = null;
-            // 
-            // ribbonPanel7
-            // 
-            this.ribbonPanel7.Items.Add(this.buttonSingleBook);
-            this.ribbonPanel7.Tag = null;
-            this.ribbonPanel7.Text = "Sách";
             // 
             // menuHome
             // 
@@ -392,6 +392,7 @@
             this.buttonSingleBook.ToolTip = null;
             this.buttonSingleBook.ToolTipTitle = null;
             this.buttonSingleBook.Value = null;
+            this.buttonSingleBook.Click += new System.EventHandler(this.buttonSingleBook_Click);
             // 
             // buttonBorrow
             // 

@@ -73,5 +73,21 @@ namespace QuanLyThuVien.v1
             formReader.MdiParent = this;
             formReader.Show();
         }
+
+        private void buttonSingleBook_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == typeof(FormSpecBook))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            FormSpecBook formSpecBook = new FormSpecBook();
+            formSpecBook.MdiParent = this;
+            formSpecBook.Show();
+        }
     }
-}
+ }
+

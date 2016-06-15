@@ -117,8 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="qLTVDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="qLTVDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>138, 17</value>
+  </metadata>
+  <metadata name="iSBNBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>338, 17</value>
+  </metadata>
+  <metadata name="iSBNTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>494, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonDeleteBook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSearchBook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC45bDN+TgAAAc1JREFUOE+VlDFo
+        GlEYx9UIRkKplEgGB8dsBYUOgQgOGSRDMmXTjp26ODnEwaFLN6UZGjLoUDEnOGTQwS2IpIMIQgdBxOYg
+        2lLQUzqU0ryv/+9eLmq8JLwf/OB49/3/9+4enOMBB7DmdDonbrf7H66v4Snchk+yDsvhcJhKpRKNRiMa
+        DAZUrVYpmUySz+f7g/vvzMlHOE8kEjSZTGg2m5kOh0NqtVqmtVqNgsGgwNyRHF9mPxQK0Xg8vg8/LGDL
+        5TLhtX5ifkPG5lwUi8WlMMuvsFjAxmIx3sVbGbsDH+wXP20xPJ1OqdPprBRkMhku+CyTd3i93tvFMNvv
+        91fCbDab5QJNJuf80HXdDBqGQb1ezzbMptNpLvgkY3M0NFO326V2u20btIxGo7YnsctH1Gw2bUOW+Xxe
+        uFyu75j3yNgyJ5FIRDQaDduwpmnC7/f/xdyeHF9lDeYCgcBtKpUSlUpF1Ot1USgURDweFx6Ph3D/izn5
+        DG/gGfwGdXgFLyEX8A5eQ2W24G/IJV+hCyrzEXIB+54XVNmEM8gFUxiAynyA1i4qvKDKK2hAq+QQKpOB
+        VgGf0guoxEs4hlZJDipzDK0C/sEow9u+gR2Hw7HzH9ryiMqvpzBsAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonDeleteReader.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC45bDN+TgAAAnZJREFUOE99kstP
@@ -135,7 +161,7 @@
         4Y5IJk8sFh5Pr63zS4678w9mmD9kJSSUK+4KfwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonSaveBook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSaveReader.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC45bDN+TgAAAphJREFUOE+tj8lP
@@ -153,7 +179,7 @@
         T/EAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonBookEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonReaderEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC45bDN+TgAAAPFJREFUOE+t079q
@@ -164,7 +190,7 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonAddBook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonAddReader.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC45bDN+TgAAAZBJREFUOE9jwAWW
@@ -175,20 +201,6 @@
         aM9StE/3PwwX7tUh3YDcXfr/YThnlz5pBtjX27NkbDX6D8PpWw1xG1BfX8+0YMEC6SVLlugCsfWiRYuc
         gLR/3nqPJ8kbTf+DcNm6kCMgsWXLljktXbrUBkjrLV68WGbVqlXMDPPnz+cACvoCBQqAihqBdB8QTwGy
         581bOnv+vKVz54PYIDGQHNCCJiC/EEgHzJw5kwsAtO5aZ4dSYYUAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="buttonSearchBook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC45bDN+TgAAAc1JREFUOE+VlDFo
-        GlEYx9UIRkKplEgGB8dsBYUOgQgOGSRDMmXTjp26ODnEwaFLN6UZGjLoUDEnOGTQwS2IpIMIQgdBxOYg
-        2lLQUzqU0ryv/+9eLmq8JLwf/OB49/3/9+4enOMBB7DmdDonbrf7H66v4Snchk+yDsvhcJhKpRKNRiMa
-        DAZUrVYpmUySz+f7g/vvzMlHOE8kEjSZTGg2m5kOh0NqtVqmtVqNgsGgwNyRHF9mPxQK0Xg8vg8/LGDL
-        5TLhtX5ifkPG5lwUi8WlMMuvsFjAxmIx3sVbGbsDH+wXP20xPJ1OqdPprBRkMhku+CyTd3i93tvFMNvv
-        91fCbDab5QJNJuf80HXdDBqGQb1ezzbMptNpLvgkY3M0NFO326V2u20btIxGo7YnsctH1Gw2bUOW+Xxe
-        uFyu75j3yNgyJ5FIRDQaDduwpmnC7/f/xdyeHF9lDeYCgcBtKpUSlUpF1Ot1USgURDweFx6Ph3D/izn5
-        DG/gGfwGdXgFLyEX8A5eQ2W24G/IJV+hCyrzEXIB+54XVNmEM8gFUxiAynyA1i4qvKDKK2hAq+QQKpOB
-        VgGf0guoxEs4hlZJDipzDK0C/sEow9u+gR2Hw7HzH9ryiMqvpzBsAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

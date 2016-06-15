@@ -87,7 +87,20 @@ namespace QuanLyThuVien.v1
 
         private void pictureBoxBookCover_DoubleClick(object sender, EventArgs e)
         {
-
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter =
+               "image files (*.png; *.jpeg; *.jpg)|*.png; *.jpeg; *.jpg|All files (*.*)|*.*";
+            dialog.InitialDirectory = "C:\\";
+            dialog.Title = "Select a image file";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string fname = dialog.FileName;
+                //richTextBox1.Text = System.IO.File.ReadAllText(fname);
+                //MessageBox.Show(fname);
+                //Image image = Image.FromFile(fname);
+               
+                pictureBoxBookCover.Image = Image.FromFile(fname);
+            }
         }
     }
 }
