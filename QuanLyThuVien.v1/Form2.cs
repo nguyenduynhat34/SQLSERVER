@@ -88,6 +88,21 @@ namespace QuanLyThuVien.v1
             formSpecBook.MdiParent = this;
             formSpecBook.Show();
         }
+
+        private void buttonBorrow_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == typeof(BorrowBook))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            BorrowBook borrowBook = new BorrowBook();
+            borrowBook.MdiParent = this;
+            borrowBook.Show();
+        }
     }
  }
 

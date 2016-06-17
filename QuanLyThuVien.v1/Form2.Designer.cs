@@ -34,35 +34,35 @@
             this.ribbonSeparator1 = new System.Windows.Forms.RibbonSeparator();
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
-            this.ribbon1 = new System.Windows.Forms.Ribbon();
-            this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
-            this.ribbonSeparator3 = new System.Windows.Forms.RibbonSeparator();
-            this.menuHome = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.menuInfo = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.menuManage = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.menuLogout = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.menuExit = new System.Windows.Forms.RibbonOrbMenuItem();
             this.buttonBook = new System.Windows.Forms.RibbonButton();
             this.buttonAuthor = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.buttonReader = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
             this.buttonSingleBook = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.buttonBorrow = new System.Windows.Forms.RibbonButton();
             this.buttonReturn = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.buttonListBook = new System.Windows.Forms.RibbonButton();
             this.buttonOverTime = new System.Windows.Forms.RibbonButton();
             this.buttonBorrowReader = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
             this.buttonReport = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
             this.buttonBackup = new System.Windows.Forms.RibbonButton();
             this.buttonRestore = new System.Windows.Forms.RibbonButton();
+            this.ribbon1 = new System.Windows.Forms.Ribbon();
+            this.menuHome = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
+            this.menuInfo = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.menuManage = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonSeparator3 = new System.Windows.Forms.RibbonSeparator();
+            this.menuLogout = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.menuExit = new System.Windows.Forms.RibbonOrbMenuItem();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,223 +112,6 @@
             this.ribbonPanel1.Tag = null;
             this.ribbonPanel1.Text = "Danh mục";
             // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.Items.Add(this.buttonReader);
-            this.ribbonPanel2.Tag = null;
-            this.ribbonPanel2.Text = "Độc giả";
-            // 
-            // ribbonPanel7
-            // 
-            this.ribbonPanel7.Items.Add(this.buttonSingleBook);
-            this.ribbonPanel7.Tag = null;
-            this.ribbonPanel7.Text = "Sách";
-            // 
-            // ribbonTab2
-            // 
-            this.ribbonTab2.Panels.Add(this.ribbonPanel3);
-            this.ribbonTab2.Tag = null;
-            this.ribbonTab2.Text = "Nghiệp vụ";
-            this.ribbonTab2.ToolTip = null;
-            this.ribbonTab2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.None;
-            this.ribbonTab2.ToolTipImage = null;
-            this.ribbonTab2.ToolTipTitle = null;
-            this.ribbonTab2.Value = null;
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.Items.Add(this.buttonBorrow);
-            this.ribbonPanel3.Items.Add(this.buttonReturn);
-            this.ribbonPanel3.Tag = null;
-            this.ribbonPanel3.Text = "Mượn, trả sách";
-            // 
-            // ribbonTab3
-            // 
-            this.ribbonTab3.Panels.Add(this.ribbonPanel5);
-            this.ribbonTab3.Panels.Add(this.ribbonPanel6);
-            this.ribbonTab3.Tag = null;
-            this.ribbonTab3.Text = "Thống kê, Báo cáo";
-            this.ribbonTab3.ToolTip = null;
-            this.ribbonTab3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.None;
-            this.ribbonTab3.ToolTipImage = null;
-            this.ribbonTab3.ToolTipTitle = null;
-            this.ribbonTab3.Value = null;
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.buttonListBook);
-            this.ribbonPanel5.Items.Add(this.buttonOverTime);
-            this.ribbonPanel5.Items.Add(this.buttonBorrowReader);
-            this.ribbonPanel5.Tag = null;
-            this.ribbonPanel5.Text = "Thống kê";
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.Items.Add(this.buttonReport);
-            this.ribbonPanel6.Tag = null;
-            this.ribbonPanel6.Text = "Báo cáo";
-            // 
-            // ribbonTab4
-            // 
-            this.ribbonTab4.Panels.Add(this.ribbonPanel4);
-            this.ribbonTab4.Tag = null;
-            this.ribbonTab4.Text = "Sao lưu và khôi phục";
-            this.ribbonTab4.ToolTip = null;
-            this.ribbonTab4.ToolTipIcon = System.Windows.Forms.ToolTipIcon.None;
-            this.ribbonTab4.ToolTipImage = null;
-            this.ribbonTab4.ToolTipTitle = null;
-            this.ribbonTab4.Value = null;
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.Items.Add(this.buttonBackup);
-            this.ribbonPanel4.Items.Add(this.buttonRestore);
-            this.ribbonPanel4.Tag = null;
-            this.ribbonPanel4.Text = "Sao lưu và khôi phục";
-            // 
-            // ribbon1
-            // 
-            this.ribbon1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.ribbon1.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.Name = "ribbon1";
-            // 
-            // 
-            // 
-            this.ribbon1.OrbDropDown.BorderRoundness = 8;
-            this.ribbon1.OrbDropDown.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonSeparator1);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuHome);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonSeparator2);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuInfo);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuManage);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonSeparator3);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuLogout);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuExit);
-            this.ribbon1.OrbDropDown.Name = "";
-            this.ribbon1.OrbDropDown.RecentItemsCaption = null;
-            this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 301);
-            this.ribbon1.OrbDropDown.TabIndex = 0;
-            this.ribbon1.OrbImage = null;
-            this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2010;
-            this.ribbon1.OrbText = "Hệ thống";
-            // 
-            // 
-            // 
-            this.ribbon1.QuickAcessToolbar.AltKey = null;
-            this.ribbon1.QuickAcessToolbar.CheckedGroup = null;
-            this.ribbon1.QuickAcessToolbar.Image = null;
-            this.ribbon1.QuickAcessToolbar.Tag = null;
-            this.ribbon1.QuickAcessToolbar.Text = null;
-            this.ribbon1.QuickAcessToolbar.ToolTip = null;
-            this.ribbon1.QuickAcessToolbar.ToolTipTitle = null;
-            this.ribbon1.QuickAcessToolbar.Value = null;
-            this.ribbon1.Size = new System.Drawing.Size(1031, 155);
-            this.ribbon1.TabIndex = 2;
-            this.ribbon1.Tabs.Add(this.ribbonTab1);
-            this.ribbon1.Tabs.Add(this.ribbonTab2);
-            this.ribbon1.Tabs.Add(this.ribbonTab3);
-            this.ribbon1.Tabs.Add(this.ribbonTab4);
-            this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 26, 20, 0);
-            this.ribbon1.TabSpacing = 6;
-            this.ribbon1.Text = "ribbon1";
-            // 
-            // ribbonSeparator2
-            // 
-            this.ribbonSeparator2.AltKey = null;
-            this.ribbonSeparator2.CheckedGroup = null;
-            this.ribbonSeparator2.Image = null;
-            this.ribbonSeparator2.Tag = null;
-            this.ribbonSeparator2.Text = null;
-            this.ribbonSeparator2.ToolTip = null;
-            this.ribbonSeparator2.ToolTipTitle = null;
-            this.ribbonSeparator2.Value = null;
-            // 
-            // ribbonSeparator3
-            // 
-            this.ribbonSeparator3.AltKey = null;
-            this.ribbonSeparator3.CheckedGroup = null;
-            this.ribbonSeparator3.Image = null;
-            this.ribbonSeparator3.Tag = null;
-            this.ribbonSeparator3.Text = null;
-            this.ribbonSeparator3.ToolTip = null;
-            this.ribbonSeparator3.ToolTipTitle = null;
-            this.ribbonSeparator3.Value = null;
-            // 
-            // menuHome
-            // 
-            this.menuHome.AltKey = null;
-            this.menuHome.CheckedGroup = null;
-            this.menuHome.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.menuHome.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.menuHome.Image = ((System.Drawing.Image)(resources.GetObject("menuHome.Image")));
-            this.menuHome.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuHome.SmallImage")));
-            this.menuHome.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.menuHome.Tag = null;
-            this.menuHome.Text = "Trang chính";
-            this.menuHome.ToolTip = null;
-            this.menuHome.ToolTipTitle = null;
-            this.menuHome.Value = null;
-            // 
-            // menuInfo
-            // 
-            this.menuInfo.AltKey = null;
-            this.menuInfo.CheckedGroup = null;
-            this.menuInfo.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.menuInfo.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.menuInfo.Image = ((System.Drawing.Image)(resources.GetObject("menuInfo.Image")));
-            this.menuInfo.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuInfo.SmallImage")));
-            this.menuInfo.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.menuInfo.Tag = null;
-            this.menuInfo.Text = "Thông tin cá nhân";
-            this.menuInfo.ToolTip = null;
-            this.menuInfo.ToolTipTitle = null;
-            this.menuInfo.Value = null;
-            // 
-            // menuManage
-            // 
-            this.menuManage.AltKey = null;
-            this.menuManage.CheckedGroup = null;
-            this.menuManage.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.menuManage.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.menuManage.Image = ((System.Drawing.Image)(resources.GetObject("menuManage.Image")));
-            this.menuManage.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuManage.SmallImage")));
-            this.menuManage.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.menuManage.Tag = null;
-            this.menuManage.Text = "Quản lý nhân viên";
-            this.menuManage.ToolTip = null;
-            this.menuManage.ToolTipTitle = null;
-            this.menuManage.Value = null;
-            // 
-            // menuLogout
-            // 
-            this.menuLogout.AltKey = null;
-            this.menuLogout.CheckedGroup = null;
-            this.menuLogout.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.menuLogout.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.menuLogout.Image = ((System.Drawing.Image)(resources.GetObject("menuLogout.Image")));
-            this.menuLogout.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuLogout.SmallImage")));
-            this.menuLogout.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.menuLogout.Tag = null;
-            this.menuLogout.Text = "Đăng xuất";
-            this.menuLogout.ToolTip = null;
-            this.menuLogout.ToolTipTitle = null;
-            this.menuLogout.Value = null;
-            // 
-            // menuExit
-            // 
-            this.menuExit.AltKey = null;
-            this.menuExit.CheckedGroup = null;
-            this.menuExit.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.menuExit.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.menuExit.Image = ((System.Drawing.Image)(resources.GetObject("menuExit.Image")));
-            this.menuExit.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuExit.SmallImage")));
-            this.menuExit.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.menuExit.Tag = null;
-            this.menuExit.Text = "Thoát";
-            this.menuExit.ToolTip = null;
-            this.menuExit.ToolTipTitle = null;
-            this.menuExit.Value = null;
-            // 
             // buttonBook
             // 
             this.buttonBook.AltKey = null;
@@ -361,6 +144,12 @@
             this.buttonAuthor.Value = null;
             this.buttonAuthor.Click += new System.EventHandler(this.buttonAuthor_Click);
             // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.Items.Add(this.buttonReader);
+            this.ribbonPanel2.Tag = null;
+            this.ribbonPanel2.Text = "Độc giả";
+            // 
             // buttonReader
             // 
             this.buttonReader.AltKey = null;
@@ -376,6 +165,12 @@
             this.buttonReader.ToolTipTitle = null;
             this.buttonReader.Value = null;
             this.buttonReader.Click += new System.EventHandler(this.buttonReader_Click);
+            // 
+            // ribbonPanel7
+            // 
+            this.ribbonPanel7.Items.Add(this.buttonSingleBook);
+            this.ribbonPanel7.Tag = null;
+            this.ribbonPanel7.Text = "Sách";
             // 
             // buttonSingleBook
             // 
@@ -394,6 +189,24 @@
             this.buttonSingleBook.Value = null;
             this.buttonSingleBook.Click += new System.EventHandler(this.buttonSingleBook_Click);
             // 
+            // ribbonTab2
+            // 
+            this.ribbonTab2.Panels.Add(this.ribbonPanel3);
+            this.ribbonTab2.Tag = null;
+            this.ribbonTab2.Text = "Nghiệp vụ";
+            this.ribbonTab2.ToolTip = null;
+            this.ribbonTab2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.None;
+            this.ribbonTab2.ToolTipImage = null;
+            this.ribbonTab2.ToolTipTitle = null;
+            this.ribbonTab2.Value = null;
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.Items.Add(this.buttonBorrow);
+            this.ribbonPanel3.Items.Add(this.buttonReturn);
+            this.ribbonPanel3.Tag = null;
+            this.ribbonPanel3.Text = "Mượn, trả sách";
+            // 
             // buttonBorrow
             // 
             this.buttonBorrow.AltKey = null;
@@ -408,6 +221,7 @@
             this.buttonBorrow.ToolTip = null;
             this.buttonBorrow.ToolTipTitle = null;
             this.buttonBorrow.Value = null;
+            this.buttonBorrow.Click += new System.EventHandler(this.buttonBorrow_Click);
             // 
             // buttonReturn
             // 
@@ -423,6 +237,26 @@
             this.buttonReturn.ToolTip = null;
             this.buttonReturn.ToolTipTitle = null;
             this.buttonReturn.Value = null;
+            // 
+            // ribbonTab3
+            // 
+            this.ribbonTab3.Panels.Add(this.ribbonPanel5);
+            this.ribbonTab3.Panels.Add(this.ribbonPanel6);
+            this.ribbonTab3.Tag = null;
+            this.ribbonTab3.Text = "Thống kê, Báo cáo";
+            this.ribbonTab3.ToolTip = null;
+            this.ribbonTab3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.None;
+            this.ribbonTab3.ToolTipImage = null;
+            this.ribbonTab3.ToolTipTitle = null;
+            this.ribbonTab3.Value = null;
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.Items.Add(this.buttonListBook);
+            this.ribbonPanel5.Items.Add(this.buttonOverTime);
+            this.ribbonPanel5.Items.Add(this.buttonBorrowReader);
+            this.ribbonPanel5.Tag = null;
+            this.ribbonPanel5.Text = "Thống kê";
             // 
             // buttonListBook
             // 
@@ -470,6 +304,12 @@
             this.buttonBorrowReader.ToolTipTitle = null;
             this.buttonBorrowReader.Value = null;
             // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.Items.Add(this.buttonReport);
+            this.ribbonPanel6.Tag = null;
+            this.ribbonPanel6.Text = "Báo cáo";
+            // 
             // buttonReport
             // 
             this.buttonReport.AltKey = null;
@@ -484,6 +324,24 @@
             this.buttonReport.ToolTip = null;
             this.buttonReport.ToolTipTitle = null;
             this.buttonReport.Value = null;
+            // 
+            // ribbonTab4
+            // 
+            this.ribbonTab4.Panels.Add(this.ribbonPanel4);
+            this.ribbonTab4.Tag = null;
+            this.ribbonTab4.Text = "Sao lưu và khôi phục";
+            this.ribbonTab4.ToolTip = null;
+            this.ribbonTab4.ToolTipIcon = System.Windows.Forms.ToolTipIcon.None;
+            this.ribbonTab4.ToolTipImage = null;
+            this.ribbonTab4.ToolTipTitle = null;
+            this.ribbonTab4.Value = null;
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.Items.Add(this.buttonBackup);
+            this.ribbonPanel4.Items.Add(this.buttonRestore);
+            this.ribbonPanel4.Tag = null;
+            this.ribbonPanel4.Text = "Sao lưu và khôi phục";
             // 
             // buttonBackup
             // 
@@ -514,6 +372,149 @@
             this.buttonRestore.ToolTip = null;
             this.buttonRestore.ToolTipTitle = null;
             this.buttonRestore.Value = null;
+            // 
+            // ribbon1
+            // 
+            this.ribbon1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.ribbon1.Location = new System.Drawing.Point(0, 0);
+            this.ribbon1.Name = "ribbon1";
+            // 
+            // 
+            // 
+            this.ribbon1.OrbDropDown.BorderRoundness = 8;
+            this.ribbon1.OrbDropDown.Location = new System.Drawing.Point(0, 0);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonSeparator1);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuHome);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonSeparator2);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuInfo);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuManage);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonSeparator3);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuLogout);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.menuExit);
+            this.ribbon1.OrbDropDown.Name = "";
+            this.ribbon1.OrbDropDown.RecentItemsCaption = null;
+            this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 301);
+            this.ribbon1.OrbDropDown.TabIndex = 0;
+            this.ribbon1.OrbImage = null;
+            this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2010;
+            this.ribbon1.OrbText = "Hệ thống";
+            // 
+            // 
+            // 
+            this.ribbon1.QuickAcessToolbar.AltKey = null;
+            this.ribbon1.QuickAcessToolbar.CheckedGroup = null;
+            this.ribbon1.QuickAcessToolbar.Image = null;
+            this.ribbon1.QuickAcessToolbar.Tag = null;
+            this.ribbon1.QuickAcessToolbar.Text = null;
+            this.ribbon1.QuickAcessToolbar.ToolTip = null;
+            this.ribbon1.QuickAcessToolbar.ToolTipTitle = null;
+            this.ribbon1.QuickAcessToolbar.Value = null;
+            this.ribbon1.Size = new System.Drawing.Size(1031, 155);
+            this.ribbon1.TabIndex = 2;
+            this.ribbon1.Tabs.Add(this.ribbonTab1);
+            this.ribbon1.Tabs.Add(this.ribbonTab2);
+            this.ribbon1.Tabs.Add(this.ribbonTab3);
+            this.ribbon1.Tabs.Add(this.ribbonTab4);
+            this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 26, 20, 0);
+            this.ribbon1.TabSpacing = 6;
+            this.ribbon1.Text = "ribbon1";
+            // 
+            // menuHome
+            // 
+            this.menuHome.AltKey = null;
+            this.menuHome.CheckedGroup = null;
+            this.menuHome.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.menuHome.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.menuHome.Image = ((System.Drawing.Image)(resources.GetObject("menuHome.Image")));
+            this.menuHome.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuHome.SmallImage")));
+            this.menuHome.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.menuHome.Tag = null;
+            this.menuHome.Text = "Trang chính";
+            this.menuHome.ToolTip = null;
+            this.menuHome.ToolTipTitle = null;
+            this.menuHome.Value = null;
+            // 
+            // ribbonSeparator2
+            // 
+            this.ribbonSeparator2.AltKey = null;
+            this.ribbonSeparator2.CheckedGroup = null;
+            this.ribbonSeparator2.Image = null;
+            this.ribbonSeparator2.Tag = null;
+            this.ribbonSeparator2.Text = null;
+            this.ribbonSeparator2.ToolTip = null;
+            this.ribbonSeparator2.ToolTipTitle = null;
+            this.ribbonSeparator2.Value = null;
+            // 
+            // menuInfo
+            // 
+            this.menuInfo.AltKey = null;
+            this.menuInfo.CheckedGroup = null;
+            this.menuInfo.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.menuInfo.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.menuInfo.Image = ((System.Drawing.Image)(resources.GetObject("menuInfo.Image")));
+            this.menuInfo.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuInfo.SmallImage")));
+            this.menuInfo.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.menuInfo.Tag = null;
+            this.menuInfo.Text = "Thông tin cá nhân";
+            this.menuInfo.ToolTip = null;
+            this.menuInfo.ToolTipTitle = null;
+            this.menuInfo.Value = null;
+            // 
+            // menuManage
+            // 
+            this.menuManage.AltKey = null;
+            this.menuManage.CheckedGroup = null;
+            this.menuManage.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.menuManage.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.menuManage.Image = ((System.Drawing.Image)(resources.GetObject("menuManage.Image")));
+            this.menuManage.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuManage.SmallImage")));
+            this.menuManage.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.menuManage.Tag = null;
+            this.menuManage.Text = "Quản lý nhân viên";
+            this.menuManage.ToolTip = null;
+            this.menuManage.ToolTipTitle = null;
+            this.menuManage.Value = null;
+            // 
+            // ribbonSeparator3
+            // 
+            this.ribbonSeparator3.AltKey = null;
+            this.ribbonSeparator3.CheckedGroup = null;
+            this.ribbonSeparator3.Image = null;
+            this.ribbonSeparator3.Tag = null;
+            this.ribbonSeparator3.Text = null;
+            this.ribbonSeparator3.ToolTip = null;
+            this.ribbonSeparator3.ToolTipTitle = null;
+            this.ribbonSeparator3.Value = null;
+            // 
+            // menuLogout
+            // 
+            this.menuLogout.AltKey = null;
+            this.menuLogout.CheckedGroup = null;
+            this.menuLogout.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.menuLogout.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.menuLogout.Image = ((System.Drawing.Image)(resources.GetObject("menuLogout.Image")));
+            this.menuLogout.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuLogout.SmallImage")));
+            this.menuLogout.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.menuLogout.Tag = null;
+            this.menuLogout.Text = "Đăng xuất";
+            this.menuLogout.ToolTip = null;
+            this.menuLogout.ToolTipTitle = null;
+            this.menuLogout.Value = null;
+            // 
+            // menuExit
+            // 
+            this.menuExit.AltKey = null;
+            this.menuExit.CheckedGroup = null;
+            this.menuExit.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.menuExit.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.menuExit.Image = ((System.Drawing.Image)(resources.GetObject("menuExit.Image")));
+            this.menuExit.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuExit.SmallImage")));
+            this.menuExit.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.menuExit.Tag = null;
+            this.menuExit.Text = "Thoát";
+            this.menuExit.ToolTip = null;
+            this.menuExit.ToolTipTitle = null;
+            this.menuExit.Value = null;
             // 
             // Form2
             // 
