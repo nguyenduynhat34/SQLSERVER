@@ -103,6 +103,21 @@ namespace QuanLyThuVien.v1
             borrowBook.MdiParent = this;
             borrowBook.Show();
         }
+
+        private void buttonReturn_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == typeof(FormBookReturn))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            FormBookReturn form = new FormBookReturn();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
  }
 

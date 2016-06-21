@@ -16,5 +16,20 @@ namespace QuanLyThuVien.v1
         {
             InitializeComponent();
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            this.ControlBox = false;
+            this.WindowState = FormWindowState.Maximized;
+            this.BringToFront();
+        }
+
+        private void FormBookReturn_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qLTVDataSet.ISBN' table. You can move, or remove it, as needed.
+            this.iSBNTableAdapter.Fill(this.qLTVDataSet.ISBN);
+
+        }
     }
 }

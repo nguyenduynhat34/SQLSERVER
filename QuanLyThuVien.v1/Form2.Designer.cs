@@ -237,6 +237,7 @@
             this.buttonReturn.ToolTip = null;
             this.buttonReturn.ToolTipTitle = null;
             this.buttonReturn.Value = null;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
             // ribbonTab3
             // 

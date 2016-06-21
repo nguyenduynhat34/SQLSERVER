@@ -57,15 +57,16 @@ namespace QuanLyThuVien.v1
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonCancelSearch = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxAuthorID = new System.Windows.Forms.TextBox();
             this.buttonDeleteBook = new System.Windows.Forms.Button();
             this.buttonSaveBook = new System.Windows.Forms.Button();
             this.buttonBookEdit = new System.Windows.Forms.Button();
             this.buttonAddBook = new System.Windows.Forms.Button();
             this.buttonSearchBook = new System.Windows.Forms.Button();
             this.pictureBoxBookCover = new System.Windows.Forms.PictureBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookCover)).BeginInit();
             this.SuspendLayout();
@@ -110,6 +111,7 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxBookID.Location = new System.Drawing.Point(295, 20);
             this.textBoxBookID.Name = "textBoxBookID";
+            this.textBoxBookID.ReadOnly = true;
             this.textBoxBookID.Size = new System.Drawing.Size(170, 20);
             this.textBoxBookID.TabIndex = 5;
             // 
@@ -117,6 +119,7 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxBookName.Location = new System.Drawing.Point(295, 51);
             this.textBoxBookName.Name = "textBoxBookName";
+            this.textBoxBookName.ReadOnly = true;
             this.textBoxBookName.Size = new System.Drawing.Size(170, 20);
             this.textBoxBookName.TabIndex = 6;
             // 
@@ -124,6 +127,7 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxBookSize.Location = new System.Drawing.Point(295, 86);
             this.textBoxBookSize.Name = "textBoxBookSize";
+            this.textBoxBookSize.ReadOnly = true;
             this.textBoxBookSize.Size = new System.Drawing.Size(170, 20);
             this.textBoxBookSize.TabIndex = 7;
             // 
@@ -132,6 +136,7 @@ namespace QuanLyThuVien.v1
             this.textBoxBookContent.Location = new System.Drawing.Point(295, 115);
             this.textBoxBookContent.Multiline = true;
             this.textBoxBookContent.Name = "textBoxBookContent";
+            this.textBoxBookContent.ReadOnly = true;
             this.textBoxBookContent.Size = new System.Drawing.Size(170, 38);
             this.textBoxBookContent.TabIndex = 8;
             // 
@@ -212,6 +217,7 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxPublishTime.Location = new System.Drawing.Point(654, 25);
             this.textBoxPublishTime.Name = "textBoxPublishTime";
+            this.textBoxPublishTime.ReadOnly = true;
             this.textBoxPublishTime.Size = new System.Drawing.Size(146, 20);
             this.textBoxPublishTime.TabIndex = 17;
             // 
@@ -219,6 +225,7 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxBookPages.Location = new System.Drawing.Point(654, 55);
             this.textBoxBookPages.Name = "textBoxBookPages";
+            this.textBoxBookPages.ReadOnly = true;
             this.textBoxBookPages.Size = new System.Drawing.Size(146, 20);
             this.textBoxBookPages.TabIndex = 18;
             // 
@@ -226,6 +233,7 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxBookCost.Location = new System.Drawing.Point(654, 83);
             this.textBoxBookCost.Name = "textBoxBookCost";
+            this.textBoxBookCost.ReadOnly = true;
             this.textBoxBookCost.Size = new System.Drawing.Size(146, 20);
             this.textBoxBookCost.TabIndex = 19;
             // 
@@ -233,6 +241,7 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxPublishHouse.Location = new System.Drawing.Point(654, 112);
             this.textBoxPublishHouse.Name = "textBoxPublishHouse";
+            this.textBoxPublishHouse.ReadOnly = true;
             this.textBoxPublishHouse.Size = new System.Drawing.Size(146, 20);
             this.textBoxPublishHouse.TabIndex = 20;
             // 
@@ -240,6 +249,7 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxLangID.Location = new System.Drawing.Point(654, 143);
             this.textBoxLangID.Name = "textBoxLangID";
+            this.textBoxLangID.ReadOnly = true;
             this.textBoxLangID.Size = new System.Drawing.Size(146, 20);
             this.textBoxLangID.TabIndex = 21;
             // 
@@ -247,14 +257,18 @@ namespace QuanLyThuVien.v1
             // 
             this.textBoxBookTypeID.Location = new System.Drawing.Point(654, 175);
             this.textBoxBookTypeID.Name = "textBoxBookTypeID";
+            this.textBoxBookTypeID.ReadOnly = true;
             this.textBoxBookTypeID.Size = new System.Drawing.Size(146, 20);
             this.textBoxBookTypeID.TabIndex = 22;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 324);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(920, 189);
             this.dataGridView1.TabIndex = 23;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -287,14 +301,14 @@ namespace QuanLyThuVien.v1
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 26;
             // 
-            // buttonCancel
+            // buttonCancelSearch
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(725, 280);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 28;
-            this.buttonCancel.Text = "Hủy";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancelSearch.Location = new System.Drawing.Point(725, 280);
+            this.buttonCancelSearch.Name = "buttonCancelSearch";
+            this.buttonCancelSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelSearch.TabIndex = 28;
+            this.buttonCancelSearch.Text = "Hủy";
+            this.buttonCancelSearch.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -305,12 +319,13 @@ namespace QuanLyThuVien.v1
             this.label13.TabIndex = 33;
             this.label13.Text = "Mã tác giả";
             // 
-            // textBox2
+            // textBoxAuthorID
             // 
-            this.textBox2.Location = new System.Drawing.Point(295, 159);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 20);
-            this.textBox2.TabIndex = 34;
+            this.textBoxAuthorID.Location = new System.Drawing.Point(295, 159);
+            this.textBoxAuthorID.Name = "textBoxAuthorID";
+            this.textBoxAuthorID.ReadOnly = true;
+            this.textBoxAuthorID.Size = new System.Drawing.Size(170, 20);
+            this.textBoxAuthorID.TabIndex = 34;
             // 
             // buttonDeleteBook
             // 
@@ -322,6 +337,7 @@ namespace QuanLyThuVien.v1
             this.buttonDeleteBook.TabIndex = 32;
             this.buttonDeleteBook.Text = "Xóa";
             this.buttonDeleteBook.UseVisualStyleBackColor = true;
+            this.buttonDeleteBook.Click += new System.EventHandler(this.buttonDeleteBook_Click);
             // 
             // buttonSaveBook
             // 
@@ -333,6 +349,7 @@ namespace QuanLyThuVien.v1
             this.buttonSaveBook.TabIndex = 31;
             this.buttonSaveBook.Text = "Lưu";
             this.buttonSaveBook.UseVisualStyleBackColor = true;
+            this.buttonSaveBook.Click += new System.EventHandler(this.buttonSaveBook_Click);
             // 
             // buttonBookEdit
             // 
@@ -344,6 +361,7 @@ namespace QuanLyThuVien.v1
             this.buttonBookEdit.TabIndex = 30;
             this.buttonBookEdit.Text = "Sửa";
             this.buttonBookEdit.UseVisualStyleBackColor = true;
+            this.buttonBookEdit.Click += new System.EventHandler(this.buttonBookEdit_Click);
             // 
             // buttonAddBook
             // 
@@ -355,6 +373,7 @@ namespace QuanLyThuVien.v1
             this.buttonAddBook.TabIndex = 29;
             this.buttonAddBook.Text = "   Thêm";
             this.buttonAddBook.UseVisualStyleBackColor = true;
+            this.buttonAddBook.Click += new System.EventHandler(this.buttonAddBook_Click);
             // 
             // buttonSearchBook
             // 
@@ -373,23 +392,34 @@ namespace QuanLyThuVien.v1
             this.pictureBoxBookCover.Location = new System.Drawing.Point(22, 13);
             this.pictureBoxBookCover.Name = "pictureBoxBookCover";
             this.pictureBoxBookCover.Size = new System.Drawing.Size(134, 162);
+            this.pictureBoxBookCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBookCover.TabIndex = 1;
             this.pictureBoxBookCover.TabStop = false;
             this.pictureBoxBookCover.DoubleClick += new System.EventHandler(this.pictureBoxBookCover_DoubleClick);
-            this.pictureBoxBookCover.SizeMode = PictureBoxSizeMode.StretchImage;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(564, 232);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 35;
+            this.buttonCancel.Text = "Hủy";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // FormBookManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 528);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.textBoxAuthorID);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.buttonDeleteBook);
             this.Controls.Add(this.buttonSaveBook);
             this.Controls.Add(this.buttonBookEdit);
             this.Controls.Add(this.buttonAddBook);
-            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonCancelSearch);
             this.Controls.Add(this.buttonSearchBook);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
@@ -459,12 +489,13 @@ namespace QuanLyThuVien.v1
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonSearchBook;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonCancelSearch;
         private System.Windows.Forms.Button buttonAddBook;
         private System.Windows.Forms.Button buttonBookEdit;
         private System.Windows.Forms.Button buttonSaveBook;
         private System.Windows.Forms.Button buttonDeleteBook;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxAuthorID;
+        private Button buttonCancel;
     }
 }
