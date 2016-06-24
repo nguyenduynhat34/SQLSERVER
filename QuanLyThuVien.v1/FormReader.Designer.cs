@@ -50,9 +50,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelSex = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelActive = new System.Windows.Forms.Panel();
             this.radioButtonActive = new System.Windows.Forms.RadioButton();
             this.radioButtonUnActive = new System.Windows.Forms.RadioButton();
             this.dateTimePickerReaderBirth = new System.Windows.Forms.DateTimePicker();
@@ -63,7 +63,7 @@
             this.buttonReaderEdit = new System.Windows.Forms.Button();
             this.buttonAddReader = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonSearchCancel = new System.Windows.Forms.Button();
             this.buttonSearchReader = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -71,8 +71,9 @@
             this.qLTVDataSet = new QuanLyThuVien.v1.QLTVDataSet();
             this.iSBNBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iSBNTableAdapter = new QuanLyThuVien.v1.QLTVDataSetTableAdapters.ISBNTableAdapter();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.panelSex.SuspendLayout();
+            this.panelActive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iSBNBindingSource)).BeginInit();
@@ -249,14 +250,14 @@
             this.radioButtonFemale.UseVisualStyleBackColor = true;
             this.radioButtonFemale.CheckedChanged += new System.EventHandler(this.radioButtonFemale_CheckedChanged);
             // 
-            // panel1
+            // panelSex
             // 
-            this.panel1.Controls.Add(this.radioButtonMale);
-            this.panel1.Controls.Add(this.radioButtonFemale);
-            this.panel1.Location = new System.Drawing.Point(202, 156);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(146, 24);
-            this.panel1.TabIndex = 34;
+            this.panelSex.Controls.Add(this.radioButtonMale);
+            this.panelSex.Controls.Add(this.radioButtonFemale);
+            this.panelSex.Location = new System.Drawing.Point(202, 156);
+            this.panelSex.Name = "panelSex";
+            this.panelSex.Size = new System.Drawing.Size(146, 24);
+            this.panelSex.TabIndex = 34;
             // 
             // label11
             // 
@@ -267,14 +268,14 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "Ngày sinh";
             // 
-            // panel2
+            // panelActive
             // 
-            this.panel2.Controls.Add(this.radioButtonActive);
-            this.panel2.Controls.Add(this.radioButtonUnActive);
-            this.panel2.Location = new System.Drawing.Point(520, 156);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(146, 24);
-            this.panel2.TabIndex = 35;
+            this.panelActive.Controls.Add(this.radioButtonActive);
+            this.panelActive.Controls.Add(this.radioButtonUnActive);
+            this.panelActive.Location = new System.Drawing.Point(520, 156);
+            this.panelActive.Name = "panelActive";
+            this.panelActive.Size = new System.Drawing.Size(146, 24);
+            this.panelActive.TabIndex = 35;
             // 
             // radioButtonActive
             // 
@@ -335,6 +336,7 @@
             this.buttonDeleteReader.TabIndex = 42;
             this.buttonDeleteReader.Text = "Xóa";
             this.buttonDeleteReader.UseVisualStyleBackColor = true;
+            this.buttonDeleteReader.Click += new System.EventHandler(this.buttonDeleteReader_Click);
             // 
             // buttonSaveReader
             // 
@@ -346,6 +348,7 @@
             this.buttonSaveReader.TabIndex = 41;
             this.buttonSaveReader.Text = "Lưu";
             this.buttonSaveReader.UseVisualStyleBackColor = true;
+            this.buttonSaveReader.Click += new System.EventHandler(this.buttonSaveReader_Click);
             // 
             // buttonReaderEdit
             // 
@@ -357,6 +360,7 @@
             this.buttonReaderEdit.TabIndex = 40;
             this.buttonReaderEdit.Text = "Sửa";
             this.buttonReaderEdit.UseVisualStyleBackColor = true;
+            this.buttonReaderEdit.Click += new System.EventHandler(this.buttonReaderEdit_Click);
             // 
             // buttonAddReader
             // 
@@ -368,26 +372,29 @@
             this.buttonAddReader.TabIndex = 39;
             this.buttonAddReader.Text = "   Thêm";
             this.buttonAddReader.UseVisualStyleBackColor = true;
+            this.buttonAddReader.Click += new System.EventHandler(this.buttonAddReader_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 295);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(991, 211);
             this.dataGridView1.TabIndex = 43;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // buttonCancel
+            // buttonSearchCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(675, 252);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 48;
-            this.buttonCancel.Text = "Hủy";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonSearchCancel.Location = new System.Drawing.Point(675, 252);
+            this.buttonSearchCancel.Name = "buttonSearchCancel";
+            this.buttonSearchCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchCancel.TabIndex = 48;
+            this.buttonSearchCancel.Text = "Hủy";
+            this.buttonSearchCancel.UseVisualStyleBackColor = true;
             // 
             // buttonSearchReader
             // 
@@ -442,12 +449,23 @@
             // 
             this.iSBNTableAdapter.ClearBeforeFill = true;
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(490, 203);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 49;
+            this.buttonCancel.Text = "Hủy";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // FormReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 518);
             this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonSearchCancel);
             this.Controls.Add(this.buttonSearchReader);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBoxSearch);
@@ -460,9 +478,9 @@
             this.Controls.Add(this.dateTimePickerEndDay);
             this.Controls.Add(this.dateTimePickerBeginDay);
             this.Controls.Add(this.dateTimePickerReaderBirth);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelActive);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelSex);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textBoxReaderPhone);
             this.Controls.Add(this.textBoxReaderAddress);
@@ -485,10 +503,10 @@
             this.Name = "FormReader";
             this.Text = "FormReader";
             this.Load += new System.EventHandler(this.FormReader_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelSex.ResumeLayout(false);
+            this.panelSex.PerformLayout();
+            this.panelActive.ResumeLayout(false);
+            this.panelActive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iSBNBindingSource)).EndInit();
@@ -519,9 +537,9 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.RadioButton radioButtonMale;
         private System.Windows.Forms.RadioButton radioButtonFemale;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelSex;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelActive;
         private System.Windows.Forms.RadioButton radioButtonActive;
         private System.Windows.Forms.RadioButton radioButtonUnActive;
         private System.Windows.Forms.DateTimePicker dateTimePickerReaderBirth;
@@ -532,7 +550,7 @@
         private System.Windows.Forms.Button buttonReaderEdit;
         private System.Windows.Forms.Button buttonAddReader;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonSearchCancel;
         private System.Windows.Forms.Button buttonSearchReader;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBoxSearch;
@@ -540,5 +558,6 @@
         private QLTVDataSet qLTVDataSet;
         private System.Windows.Forms.BindingSource iSBNBindingSource;
         private QLTVDataSetTableAdapters.ISBNTableAdapter iSBNTableAdapter;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

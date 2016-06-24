@@ -13,9 +13,30 @@ namespace QuanLyThuVien.v1
 {
     public partial class FormReader : Form
     {
+        String readerID;
+        String readerLastname;
+        String readerFirstname;
+        String readerEmail;
+        String readerNumberID;
+        String readerAddr;
+        String readerPhone;
+        bool readerSex;
+        bool activeState;
+
+        DateTime readerBirth;
+        DateTime startDate;
+        DateTime endDate;
+
+        int value;
+
         public FormReader()
         {
             InitializeComponent();
+            textBoxReaderID.ReadOnly = true;
+            disableTextbox(true);
+
+            buttonSaveReader.Visible = false;
+            buttonCancel.Visible = false;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -59,9 +80,7 @@ namespace QuanLyThuVien.v1
             }
             catch (SqlException)
             {
-                MessageBox.Show("To run this example, replace the value of the " +
-                    "connectionString variable with a connection string that is " +
-                    "valid for your system.");
+                MessageBox.Show("Error!");
             }
 
         }
@@ -97,5 +116,158 @@ namespace QuanLyThuVien.v1
                 radioButtonUnActive.Checked = true;
             }
         }
+
+        private void buttonAddReader_Click(object sender, EventArgs e)
+        {
+            disableTextbox(false);
+            buttonAddReader.Visible = false;
+            buttonReaderEdit.Visible = false;
+            buttonSaveReader.Visible = true;
+            buttonCancel.Visible = true;
+            value = 1;
+        }
+
+        private void buttonReaderEdit_Click(object sender, EventArgs e)
+        {
+            disableTextbox(false);
+            buttonAddReader.Visible = false;
+            buttonReaderEdit.Visible = false;
+            buttonSaveReader.Visible = true;
+            buttonCancel.Visible = true;
+            value = 2;
+        }
+
+        private void buttonSaveReader_Click(object sender, EventArgs e)
+        {
+            readerID = textBoxReaderID.Text;
+            readerFirstname = textBoxReaderFirstname.Text;
+            readerLastname = textBoxReaderLastname.Text;
+            readerEmail = textBoxReaderEmail.Text;
+            readerNumberID = textBoxReaderNumberID.Text;
+            readerAddr = textBoxReaderAddress.Text;
+            readerPhone = textBoxReaderPhone.Text;
+            readerBirth = dateTimePickerReaderBirth.Value;
+            startDate = dateTimePickerBeginDay.Value;
+            endDate = dateTimePickerEndDay.Value;
+            readerSex = radioButtonMale.Checked;
+            activeState = radioButtonActive.Checked;
+
+            if(value ==1)
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = Program.connstr;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SP_THEMDOCGIA", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@HO", readerFirstname);
+                    cmd.Parameters.AddWithValue("@TEN", readerLastname);
+                    cmd.Parameters.AddWithValue("@EMAIL", readerEmail);
+                    cmd.Parameters.AddWithValue("@SOCM", readerNumberID);
+                    cmd.Parameters.AddWithValue("GIOI_TINH", readerSex);
+                    cmd.Parameters.Add("@NGAY_SINH", SqlDbType.DateTime).Value = readerBirth;
+                    cmd.Parameters.AddWithValue("@DIA_CHI", readerAddr);
+                    cmd.Parameters.AddWithValue("@DIEN_THOAI", readerPhone);
+                    cmd.Parameters.Add("@NGAY_LAM_THE", SqlDbType.DateTime).Value = startDate;
+                    cmd.Parameters.Add("@NGAY_HET_HAN", SqlDbType.DateTime).Value = endDate;
+                    cmd.Parameters.AddWithValue("@HOAT_DONG", activeState);
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                } catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } else if(value == 2)
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = Program.connstr;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SP_SUADOCGIA", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@MADG", readerID);
+                    cmd.Parameters.AddWithValue("@HO", readerFirstname);
+                    cmd.Parameters.AddWithValue("@TEN", readerLastname);
+                    cmd.Parameters.AddWithValue("@EMAIL", readerEmail);
+                    cmd.Parameters.AddWithValue("@SOCM", readerNumberID);
+                    cmd.Parameters.AddWithValue("GIOI_TINH", readerSex);
+                    cmd.Parameters.Add("@NGAY_SINH", SqlDbType.DateTime).Value = readerBirth;
+                    cmd.Parameters.AddWithValue("@DIA_CHI", readerAddr);
+                    cmd.Parameters.AddWithValue("@DIEN_THOAI", readerPhone);
+                    cmd.Parameters.Add("@NGAY_LAM_THE", SqlDbType.DateTime).Value = startDate;
+                    cmd.Parameters.Add("@NGAY_HET_HAN", SqlDbType.DateTime).Value = endDate;
+                    cmd.Parameters.AddWithValue("@HOAT_DONG", activeState);
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                } catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            buttonAddReader.Visible = true;
+            buttonReaderEdit.Visible = true;
+            buttonSaveReader.Visible = false;
+            buttonCancel.Visible = false;
+            disableTextbox(true);
+        }
+
+        private void buttonDeleteReader_Click(object sender, EventArgs e)
+        {
+            readerID = textBoxReaderID.Text;
+            readerLastname = textBoxReaderLastname.Text;
+            if(readerID != "")
+            {
+
+            } 
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            buttonAddReader.Visible = true;
+            buttonReaderEdit.Visible = true;
+            buttonSaveReader.Visible = false;
+            buttonCancel.Visible = false;
+
+
+            disableTextbox(true);
+            clearAlltextBox();
+        }
+
+        void disableTextbox(bool bl)
+        {
+            textBoxReaderFirstname.ReadOnly = bl; ;
+            textBoxReaderLastname.ReadOnly = bl;
+            textBoxReaderEmail.ReadOnly = bl;
+            textBoxReaderNumberID.ReadOnly = bl;
+            textBoxReaderAddress.ReadOnly = bl;
+            textBoxReaderPhone.ReadOnly = bl;
+
+            dateTimePickerReaderBirth.Enabled = !bl;
+            dateTimePickerBeginDay.Enabled = !bl;
+            dateTimePickerEndDay.Enabled = !bl;
+
+            panelSex.Enabled = !bl;
+            panelActive.Enabled = !bl;
+        }
+
+        void clearAlltextBox()
+        {
+            textBoxReaderFirstname.Text = "";
+            textBoxReaderLastname.Text = "";
+            textBoxReaderEmail.Text = "";
+            textBoxReaderNumberID.Text = "";
+            textBoxReaderAddress.Text = "";
+            textBoxReaderPhone.Text = "";
+
+        }
+
+
     }
 }

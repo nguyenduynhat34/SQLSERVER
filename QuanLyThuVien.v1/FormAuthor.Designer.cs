@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonCancelSearch = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonDeleteAuthor = new System.Windows.Forms.Button();
             this.buttonSaveAuthor = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             this.iSBNTableAdapter = new QuanLyThuVien.v1.QLTVDataSetTableAdapters.ISBNTableAdapter();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxAuthorID = new System.Windows.Forms.TextBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iSBNBindingSource)).BeginInit();
@@ -131,14 +132,14 @@
             this.buttonSearch.Text = "  Tìm kiếm";
             this.buttonSearch.UseVisualStyleBackColor = true;
             // 
-            // buttonCancel
+            // buttonCancelSearch
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(709, 209);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 10;
-            this.buttonCancel.Text = "Hủy";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancelSearch.Location = new System.Drawing.Point(709, 209);
+            this.buttonCancelSearch.Name = "buttonCancelSearch";
+            this.buttonCancelSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelSearch.TabIndex = 10;
+            this.buttonCancelSearch.Text = "Hủy";
+            this.buttonCancelSearch.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -161,6 +162,7 @@
             this.buttonDeleteAuthor.TabIndex = 36;
             this.buttonDeleteAuthor.Text = "Xóa";
             this.buttonDeleteAuthor.UseVisualStyleBackColor = true;
+            this.buttonDeleteAuthor.Click += new System.EventHandler(this.buttonDeleteAuthor_Click);
             // 
             // buttonSaveAuthor
             // 
@@ -172,6 +174,7 @@
             this.buttonSaveAuthor.TabIndex = 35;
             this.buttonSaveAuthor.Text = "Lưu";
             this.buttonSaveAuthor.UseVisualStyleBackColor = true;
+            this.buttonSaveAuthor.Click += new System.EventHandler(this.buttonSaveAuthor_Click);
             // 
             // buttonAuthorEdit
             // 
@@ -183,6 +186,7 @@
             this.buttonAuthorEdit.TabIndex = 34;
             this.buttonAuthorEdit.Text = "Sửa";
             this.buttonAuthorEdit.UseVisualStyleBackColor = true;
+            this.buttonAuthorEdit.Click += new System.EventHandler(this.buttonAuthorEdit_Click);
             // 
             // buttonAddAuthor
             // 
@@ -194,6 +198,7 @@
             this.buttonAddAuthor.TabIndex = 33;
             this.buttonAddAuthor.Text = "   Thêm";
             this.buttonAddAuthor.UseVisualStyleBackColor = true;
+            this.buttonAddAuthor.Click += new System.EventHandler(this.buttonAddAuthor_Click);
             // 
             // dataGridView1
             // 
@@ -234,11 +239,22 @@
             this.textBoxAuthorID.Size = new System.Drawing.Size(243, 20);
             this.textBoxAuthorID.TabIndex = 39;
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(501, 160);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 40;
+            this.buttonCancel.Text = "Hủy";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // FormAuthor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 415);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.textBoxAuthorID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
@@ -247,7 +263,7 @@
             this.Controls.Add(this.buttonAuthorEdit);
             this.Controls.Add(this.buttonAddAuthor);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonCancelSearch);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
@@ -280,7 +296,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonCancelSearch;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonDeleteAuthor;
         private System.Windows.Forms.Button buttonSaveAuthor;
@@ -292,5 +308,6 @@
         private QLTVDataSetTableAdapters.ISBNTableAdapter iSBNTableAdapter;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxAuthorID;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

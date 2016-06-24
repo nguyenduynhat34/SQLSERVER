@@ -88,9 +88,7 @@ namespace QuanLyThuVien.v1
             }
             catch (SqlException)
             {
-                MessageBox.Show("To run this example, replace the value of the " +
-                    "connectionString variable with a connection string that is " +
-                    "valid for your system.");
+                MessageBox.Show("Error!");
             }
         }
 
@@ -330,26 +328,32 @@ namespace QuanLyThuVien.v1
         private void buttonDeleteBook_Click(object sender, EventArgs e)
         {
             ISBN = textBoxBookID.Text;
+            bookName = textBoxBookName.Text;
+            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa: \" " + bookName + "\"", "Xóa đầu sách", MessageBoxButtons.YesNoCancel,
+        MessageBoxIcon.Information);
+            
             if (ISBN == "")
             {
-            }else
+            }else 
             {
-                try
+                if (dr == DialogResult.Yes)
                 {
-                    SqlConnection conn = Program.conn;
-                    SqlCommand cmd = new SqlCommand("SP_XOADAUSACH", conn);
+                    try
+                    {
+                        SqlConnection conn = Program.conn;
+                        SqlCommand cmd = new SqlCommand("SP_XOADAUSACH", conn);
 
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@MA_DAUSACH", ISBN);
-                    conn.Close();
-                } catch (Exception exeption3)
-                {
-                    MessageBox.Show(exeption3.Message);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@MADAUSACH", ISBN);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                    catch (Exception exeption3)
+                    {
+                        MessageBox.Show(exeption3.Message);
+                    }
                 }
                 
-
-
-
             }
 
             
