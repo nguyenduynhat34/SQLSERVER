@@ -224,7 +224,26 @@ namespace QuanLyThuVien.v1
             readerLastname = textBoxReaderLastname.Text;
             if(readerID != "")
             {
+                DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa " + readerLastname, "Xóa độc giả", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(dr == DialogResult.Yes)
+                {
+                    try
+                    {
+                        SqlConnection conn = new SqlConnection();
+                        conn.ConnectionString = Program.connstr;
+                        conn.Open();
 
+                        SqlCommand cmd = new SqlCommand("SP_XOADOCGIA", conn);
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@MA_DOC_GIA", readerID);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    } catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             } 
         }
 

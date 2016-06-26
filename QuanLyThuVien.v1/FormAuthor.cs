@@ -174,8 +174,8 @@ namespace QuanLyThuVien.v1
         {
             AuthorID = textBoxAuthorID.Text;
             AuthorName = textBoxAuthorName.Text;
-            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa: \" " + AuthorName + "\"", "Xóa đầu sách", MessageBoxButtons.YesNoCancel,
-        MessageBoxIcon.Information);
+            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa: \" " + AuthorName + "\"", "Xóa đầu sách", MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question);
 
             if (AuthorID == "")
             {

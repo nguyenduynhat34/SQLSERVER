@@ -329,8 +329,8 @@ namespace QuanLyThuVien.v1
         {
             ISBN = textBoxBookID.Text;
             bookName = textBoxBookName.Text;
-            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa: \" " + bookName + "\"", "Xóa đầu sách", MessageBoxButtons.YesNoCancel,
-        MessageBoxIcon.Information);
+            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa: \" " + bookName + "\"", "Xóa đầu sách", MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question);
             
             if (ISBN == "")
             {
