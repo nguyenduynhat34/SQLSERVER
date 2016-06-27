@@ -118,6 +118,24 @@ namespace QuanLyThuVien.v1
             form.MdiParent = this;
             form.Show();
         }
+
+
+        private void buttonListBook_Click(object sender, EventArgs e)
+        {
+            FormBookReport form = new FormBookReport();
+            form.Show();
+        }
+
+        private void buttonOverTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBorrowBook_Click(object sender, EventArgs e)
+        {
+            FormBookBorrow form = new FormBookBorrow();
+            form.Show();
+        }
     }
  }
 

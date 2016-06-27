@@ -18,15 +18,6 @@ namespace QuanLyThuVien.v1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -47,7 +38,14 @@ namespace QuanLyThuVien.v1
 
                 Form2 form = new Form2();
                 form.Show();
+                this.Visible = false;
+          
             };
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

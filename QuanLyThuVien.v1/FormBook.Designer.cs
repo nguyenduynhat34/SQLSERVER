@@ -252,6 +252,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iSBNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTVDataSet)).EndInit();

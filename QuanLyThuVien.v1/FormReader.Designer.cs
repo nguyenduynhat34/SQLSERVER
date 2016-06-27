@@ -501,6 +501,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormReader";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReader";
             this.Load += new System.EventHandler(this.FormReader_Load);
             this.panelSex.ResumeLayout(false);

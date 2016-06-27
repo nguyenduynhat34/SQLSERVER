@@ -34,35 +34,35 @@
             this.ribbonSeparator1 = new System.Windows.Forms.RibbonSeparator();
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.buttonBook = new System.Windows.Forms.RibbonButton();
-            this.buttonAuthor = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
-            this.buttonReader = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
-            this.buttonSingleBook = new System.Windows.Forms.RibbonButton();
             this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
-            this.buttonBorrow = new System.Windows.Forms.RibbonButton();
-            this.buttonReturn = new System.Windows.Forms.RibbonButton();
             this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
-            this.buttonListBook = new System.Windows.Forms.RibbonButton();
-            this.buttonOverTime = new System.Windows.Forms.RibbonButton();
-            this.buttonBorrowReader = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
-            this.buttonReport = new System.Windows.Forms.RibbonButton();
             this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
-            this.buttonBackup = new System.Windows.Forms.RibbonButton();
-            this.buttonRestore = new System.Windows.Forms.RibbonButton();
             this.ribbon1 = new System.Windows.Forms.Ribbon();
-            this.menuHome = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
+            this.ribbonSeparator3 = new System.Windows.Forms.RibbonSeparator();
+            this.menuHome = new System.Windows.Forms.RibbonOrbMenuItem();
             this.menuInfo = new System.Windows.Forms.RibbonOrbMenuItem();
             this.menuManage = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonSeparator3 = new System.Windows.Forms.RibbonSeparator();
             this.menuLogout = new System.Windows.Forms.RibbonOrbMenuItem();
             this.menuExit = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.buttonBook = new System.Windows.Forms.RibbonButton();
+            this.buttonAuthor = new System.Windows.Forms.RibbonButton();
+            this.buttonReader = new System.Windows.Forms.RibbonButton();
+            this.buttonSingleBook = new System.Windows.Forms.RibbonButton();
+            this.buttonBorrow = new System.Windows.Forms.RibbonButton();
+            this.buttonReturn = new System.Windows.Forms.RibbonButton();
+            this.buttonListBook = new System.Windows.Forms.RibbonButton();
+            this.buttonOverTime = new System.Windows.Forms.RibbonButton();
+            this.buttonBorrowBook = new System.Windows.Forms.RibbonButton();
+            this.buttonReport = new System.Windows.Forms.RibbonButton();
+            this.buttonBackup = new System.Windows.Forms.RibbonButton();
+            this.buttonRestore = new System.Windows.Forms.RibbonButton();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,82 +112,17 @@
             this.ribbonPanel1.Tag = null;
             this.ribbonPanel1.Text = "Danh mục";
             // 
-            // buttonBook
-            // 
-            this.buttonBook.AltKey = null;
-            this.buttonBook.CheckedGroup = null;
-            this.buttonBook.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonBook.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonBook.Image")));
-            this.buttonBook.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBook.SmallImage")));
-            this.buttonBook.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonBook.Tag = null;
-            this.buttonBook.Text = "Đầu Sách";
-            this.buttonBook.ToolTip = null;
-            this.buttonBook.ToolTipTitle = null;
-            this.buttonBook.Value = null;
-            this.buttonBook.Click += new System.EventHandler(this.buttonBook_Click);
-            // 
-            // buttonAuthor
-            // 
-            this.buttonAuthor.AltKey = null;
-            this.buttonAuthor.CheckedGroup = null;
-            this.buttonAuthor.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonAuthor.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonAuthor.Image = ((System.Drawing.Image)(resources.GetObject("buttonAuthor.Image")));
-            this.buttonAuthor.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonAuthor.SmallImage")));
-            this.buttonAuthor.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonAuthor.Tag = null;
-            this.buttonAuthor.Text = "Tác giả";
-            this.buttonAuthor.ToolTip = null;
-            this.buttonAuthor.ToolTipTitle = null;
-            this.buttonAuthor.Value = null;
-            this.buttonAuthor.Click += new System.EventHandler(this.buttonAuthor_Click);
-            // 
             // ribbonPanel2
             // 
             this.ribbonPanel2.Items.Add(this.buttonReader);
             this.ribbonPanel2.Tag = null;
             this.ribbonPanel2.Text = "Độc giả";
             // 
-            // buttonReader
-            // 
-            this.buttonReader.AltKey = null;
-            this.buttonReader.CheckedGroup = null;
-            this.buttonReader.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonReader.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonReader.Image = ((System.Drawing.Image)(resources.GetObject("buttonReader.Image")));
-            this.buttonReader.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonReader.SmallImage")));
-            this.buttonReader.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonReader.Tag = null;
-            this.buttonReader.Text = "Độc giả";
-            this.buttonReader.ToolTip = null;
-            this.buttonReader.ToolTipTitle = null;
-            this.buttonReader.Value = null;
-            this.buttonReader.Click += new System.EventHandler(this.buttonReader_Click);
-            // 
             // ribbonPanel7
             // 
             this.ribbonPanel7.Items.Add(this.buttonSingleBook);
             this.ribbonPanel7.Tag = null;
             this.ribbonPanel7.Text = "Sách";
-            // 
-            // buttonSingleBook
-            // 
-            this.buttonSingleBook.AltKey = null;
-            this.buttonSingleBook.CheckedGroup = null;
-            this.buttonSingleBook.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonSingleBook.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonSingleBook.Image = global::QuanLyThuVien.v1.Properties.Resources.book32;
-            this.buttonSingleBook.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonSingleBook.SmallImage")));
-            this.buttonSingleBook.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonSingleBook.Tag = null;
-            this.buttonSingleBook.Text = "Sách";
-            this.buttonSingleBook.TextAlignment = System.Windows.Forms.RibbonItem.RibbonItemTextAlignment.Center;
-            this.buttonSingleBook.ToolTip = null;
-            this.buttonSingleBook.ToolTipTitle = null;
-            this.buttonSingleBook.Value = null;
-            this.buttonSingleBook.Click += new System.EventHandler(this.buttonSingleBook_Click);
             // 
             // ribbonTab2
             // 
@@ -207,38 +142,6 @@
             this.ribbonPanel3.Tag = null;
             this.ribbonPanel3.Text = "Mượn, trả sách";
             // 
-            // buttonBorrow
-            // 
-            this.buttonBorrow.AltKey = null;
-            this.buttonBorrow.CheckedGroup = null;
-            this.buttonBorrow.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonBorrow.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonBorrow.Image = ((System.Drawing.Image)(resources.GetObject("buttonBorrow.Image")));
-            this.buttonBorrow.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBorrow.SmallImage")));
-            this.buttonBorrow.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonBorrow.Tag = null;
-            this.buttonBorrow.Text = "Mượn sách";
-            this.buttonBorrow.ToolTip = null;
-            this.buttonBorrow.ToolTipTitle = null;
-            this.buttonBorrow.Value = null;
-            this.buttonBorrow.Click += new System.EventHandler(this.buttonBorrow_Click);
-            // 
-            // buttonReturn
-            // 
-            this.buttonReturn.AltKey = null;
-            this.buttonReturn.CheckedGroup = null;
-            this.buttonReturn.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonReturn.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonReturn.Image = ((System.Drawing.Image)(resources.GetObject("buttonReturn.Image")));
-            this.buttonReturn.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonReturn.SmallImage")));
-            this.buttonReturn.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonReturn.Tag = null;
-            this.buttonReturn.Text = "Trả sách";
-            this.buttonReturn.ToolTip = null;
-            this.buttonReturn.ToolTipTitle = null;
-            this.buttonReturn.Value = null;
-            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
-            // 
             // ribbonTab3
             // 
             this.ribbonTab3.Panels.Add(this.ribbonPanel5);
@@ -255,76 +158,15 @@
             // 
             this.ribbonPanel5.Items.Add(this.buttonListBook);
             this.ribbonPanel5.Items.Add(this.buttonOverTime);
-            this.ribbonPanel5.Items.Add(this.buttonBorrowReader);
+            this.ribbonPanel5.Items.Add(this.buttonBorrowBook);
             this.ribbonPanel5.Tag = null;
             this.ribbonPanel5.Text = "Thống kê";
-            // 
-            // buttonListBook
-            // 
-            this.buttonListBook.AltKey = null;
-            this.buttonListBook.CheckedGroup = null;
-            this.buttonListBook.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonListBook.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonListBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonListBook.Image")));
-            this.buttonListBook.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Large;
-            this.buttonListBook.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonListBook.SmallImage")));
-            this.buttonListBook.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonListBook.Tag = null;
-            this.buttonListBook.Text = "Sách mượn ";
-            this.buttonListBook.ToolTip = null;
-            this.buttonListBook.ToolTipTitle = null;
-            this.buttonListBook.Value = null;
-            // 
-            // buttonOverTime
-            // 
-            this.buttonOverTime.AltKey = null;
-            this.buttonOverTime.CheckedGroup = null;
-            this.buttonOverTime.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonOverTime.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonOverTime.Image = ((System.Drawing.Image)(resources.GetObject("buttonOverTime.Image")));
-            this.buttonOverTime.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonOverTime.SmallImage")));
-            this.buttonOverTime.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonOverTime.Tag = null;
-            this.buttonOverTime.Text = "Quá hạn";
-            this.buttonOverTime.ToolTip = null;
-            this.buttonOverTime.ToolTipTitle = null;
-            this.buttonOverTime.Value = null;
-            // 
-            // buttonBorrowReader
-            // 
-            this.buttonBorrowReader.AltKey = null;
-            this.buttonBorrowReader.CheckedGroup = null;
-            this.buttonBorrowReader.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonBorrowReader.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonBorrowReader.Image = ((System.Drawing.Image)(resources.GetObject("buttonBorrowReader.Image")));
-            this.buttonBorrowReader.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBorrowReader.SmallImage")));
-            this.buttonBorrowReader.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonBorrowReader.Tag = null;
-            this.buttonBorrowReader.Text = "Người mượn";
-            this.buttonBorrowReader.ToolTip = null;
-            this.buttonBorrowReader.ToolTipTitle = null;
-            this.buttonBorrowReader.Value = null;
             // 
             // ribbonPanel6
             // 
             this.ribbonPanel6.Items.Add(this.buttonReport);
             this.ribbonPanel6.Tag = null;
             this.ribbonPanel6.Text = "Báo cáo";
-            // 
-            // buttonReport
-            // 
-            this.buttonReport.AltKey = null;
-            this.buttonReport.CheckedGroup = null;
-            this.buttonReport.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonReport.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonReport.Image = ((System.Drawing.Image)(resources.GetObject("buttonReport.Image")));
-            this.buttonReport.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonReport.SmallImage")));
-            this.buttonReport.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonReport.Tag = null;
-            this.buttonReport.Text = "Báo cáo";
-            this.buttonReport.ToolTip = null;
-            this.buttonReport.ToolTipTitle = null;
-            this.buttonReport.Value = null;
             // 
             // ribbonTab4
             // 
@@ -343,36 +185,6 @@
             this.ribbonPanel4.Items.Add(this.buttonRestore);
             this.ribbonPanel4.Tag = null;
             this.ribbonPanel4.Text = "Sao lưu và khôi phục";
-            // 
-            // buttonBackup
-            // 
-            this.buttonBackup.AltKey = null;
-            this.buttonBackup.CheckedGroup = null;
-            this.buttonBackup.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonBackup.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonBackup.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackup.Image")));
-            this.buttonBackup.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBackup.SmallImage")));
-            this.buttonBackup.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonBackup.Tag = null;
-            this.buttonBackup.Text = "Sao lưu";
-            this.buttonBackup.ToolTip = null;
-            this.buttonBackup.ToolTipTitle = null;
-            this.buttonBackup.Value = null;
-            // 
-            // buttonRestore
-            // 
-            this.buttonRestore.AltKey = null;
-            this.buttonRestore.CheckedGroup = null;
-            this.buttonRestore.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonRestore.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonRestore.Image = ((System.Drawing.Image)(resources.GetObject("buttonRestore.Image")));
-            this.buttonRestore.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonRestore.SmallImage")));
-            this.buttonRestore.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonRestore.Tag = null;
-            this.buttonRestore.Text = "Khôi phục";
-            this.buttonRestore.ToolTip = null;
-            this.buttonRestore.ToolTipTitle = null;
-            this.buttonRestore.Value = null;
             // 
             // ribbon1
             // 
@@ -420,6 +232,28 @@
             this.ribbon1.TabSpacing = 6;
             this.ribbon1.Text = "ribbon1";
             // 
+            // ribbonSeparator2
+            // 
+            this.ribbonSeparator2.AltKey = null;
+            this.ribbonSeparator2.CheckedGroup = null;
+            this.ribbonSeparator2.Image = null;
+            this.ribbonSeparator2.Tag = null;
+            this.ribbonSeparator2.Text = null;
+            this.ribbonSeparator2.ToolTip = null;
+            this.ribbonSeparator2.ToolTipTitle = null;
+            this.ribbonSeparator2.Value = null;
+            // 
+            // ribbonSeparator3
+            // 
+            this.ribbonSeparator3.AltKey = null;
+            this.ribbonSeparator3.CheckedGroup = null;
+            this.ribbonSeparator3.Image = null;
+            this.ribbonSeparator3.Tag = null;
+            this.ribbonSeparator3.Text = null;
+            this.ribbonSeparator3.ToolTip = null;
+            this.ribbonSeparator3.ToolTipTitle = null;
+            this.ribbonSeparator3.Value = null;
+            // 
             // menuHome
             // 
             this.menuHome.AltKey = null;
@@ -434,17 +268,6 @@
             this.menuHome.ToolTip = null;
             this.menuHome.ToolTipTitle = null;
             this.menuHome.Value = null;
-            // 
-            // ribbonSeparator2
-            // 
-            this.ribbonSeparator2.AltKey = null;
-            this.ribbonSeparator2.CheckedGroup = null;
-            this.ribbonSeparator2.Image = null;
-            this.ribbonSeparator2.Tag = null;
-            this.ribbonSeparator2.Text = null;
-            this.ribbonSeparator2.ToolTip = null;
-            this.ribbonSeparator2.ToolTipTitle = null;
-            this.ribbonSeparator2.Value = null;
             // 
             // menuInfo
             // 
@@ -476,17 +299,6 @@
             this.menuManage.ToolTipTitle = null;
             this.menuManage.Value = null;
             // 
-            // ribbonSeparator3
-            // 
-            this.ribbonSeparator3.AltKey = null;
-            this.ribbonSeparator3.CheckedGroup = null;
-            this.ribbonSeparator3.Image = null;
-            this.ribbonSeparator3.Tag = null;
-            this.ribbonSeparator3.Text = null;
-            this.ribbonSeparator3.ToolTip = null;
-            this.ribbonSeparator3.ToolTipTitle = null;
-            this.ribbonSeparator3.Value = null;
-            // 
             // menuLogout
             // 
             this.menuLogout.AltKey = null;
@@ -517,6 +329,197 @@
             this.menuExit.ToolTipTitle = null;
             this.menuExit.Value = null;
             // 
+            // buttonBook
+            // 
+            this.buttonBook.AltKey = null;
+            this.buttonBook.CheckedGroup = null;
+            this.buttonBook.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonBook.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonBook.Image")));
+            this.buttonBook.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBook.SmallImage")));
+            this.buttonBook.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonBook.Tag = null;
+            this.buttonBook.Text = "Đầu Sách";
+            this.buttonBook.ToolTip = null;
+            this.buttonBook.ToolTipTitle = null;
+            this.buttonBook.Value = null;
+            this.buttonBook.Click += new System.EventHandler(this.buttonBook_Click);
+            // 
+            // buttonAuthor
+            // 
+            this.buttonAuthor.AltKey = null;
+            this.buttonAuthor.CheckedGroup = null;
+            this.buttonAuthor.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonAuthor.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonAuthor.Image = ((System.Drawing.Image)(resources.GetObject("buttonAuthor.Image")));
+            this.buttonAuthor.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonAuthor.SmallImage")));
+            this.buttonAuthor.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonAuthor.Tag = null;
+            this.buttonAuthor.Text = "Tác giả";
+            this.buttonAuthor.ToolTip = null;
+            this.buttonAuthor.ToolTipTitle = null;
+            this.buttonAuthor.Value = null;
+            this.buttonAuthor.Click += new System.EventHandler(this.buttonAuthor_Click);
+            // 
+            // buttonReader
+            // 
+            this.buttonReader.AltKey = null;
+            this.buttonReader.CheckedGroup = null;
+            this.buttonReader.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonReader.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonReader.Image = ((System.Drawing.Image)(resources.GetObject("buttonReader.Image")));
+            this.buttonReader.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonReader.SmallImage")));
+            this.buttonReader.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonReader.Tag = null;
+            this.buttonReader.Text = "Độc giả";
+            this.buttonReader.ToolTip = null;
+            this.buttonReader.ToolTipTitle = null;
+            this.buttonReader.Value = null;
+            this.buttonReader.Click += new System.EventHandler(this.buttonReader_Click);
+            // 
+            // buttonSingleBook
+            // 
+            this.buttonSingleBook.AltKey = null;
+            this.buttonSingleBook.CheckedGroup = null;
+            this.buttonSingleBook.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonSingleBook.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonSingleBook.Image = global::QuanLyThuVien.v1.Properties.Resources.book32;
+            this.buttonSingleBook.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonSingleBook.SmallImage")));
+            this.buttonSingleBook.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonSingleBook.Tag = null;
+            this.buttonSingleBook.Text = "Sách";
+            this.buttonSingleBook.TextAlignment = System.Windows.Forms.RibbonItem.RibbonItemTextAlignment.Center;
+            this.buttonSingleBook.ToolTip = null;
+            this.buttonSingleBook.ToolTipTitle = null;
+            this.buttonSingleBook.Value = null;
+            this.buttonSingleBook.Click += new System.EventHandler(this.buttonSingleBook_Click);
+            // 
+            // buttonBorrow
+            // 
+            this.buttonBorrow.AltKey = null;
+            this.buttonBorrow.CheckedGroup = null;
+            this.buttonBorrow.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonBorrow.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonBorrow.Image = ((System.Drawing.Image)(resources.GetObject("buttonBorrow.Image")));
+            this.buttonBorrow.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBorrow.SmallImage")));
+            this.buttonBorrow.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonBorrow.Tag = null;
+            this.buttonBorrow.Text = "Mượn sách";
+            this.buttonBorrow.ToolTip = null;
+            this.buttonBorrow.ToolTipTitle = null;
+            this.buttonBorrow.Value = null;
+            this.buttonBorrow.Click += new System.EventHandler(this.buttonBorrow_Click);
+            // 
+            // buttonReturn
+            // 
+            this.buttonReturn.AltKey = null;
+            this.buttonReturn.CheckedGroup = null;
+            this.buttonReturn.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonReturn.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonReturn.Image = ((System.Drawing.Image)(resources.GetObject("buttonReturn.Image")));
+            this.buttonReturn.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonReturn.SmallImage")));
+            this.buttonReturn.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonReturn.Tag = null;
+            this.buttonReturn.Text = "Trả sách";
+            this.buttonReturn.ToolTip = null;
+            this.buttonReturn.ToolTipTitle = null;
+            this.buttonReturn.Value = null;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
+            // 
+            // buttonListBook
+            // 
+            this.buttonListBook.AltKey = null;
+            this.buttonListBook.CheckedGroup = null;
+            this.buttonListBook.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonListBook.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonListBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonListBook.Image")));
+            this.buttonListBook.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Large;
+            this.buttonListBook.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonListBook.SmallImage")));
+            this.buttonListBook.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonListBook.Tag = null;
+            this.buttonListBook.Text = "Sách mượn ";
+            this.buttonListBook.ToolTip = null;
+            this.buttonListBook.ToolTipTitle = null;
+            this.buttonListBook.Value = null;
+            this.buttonListBook.Click += new System.EventHandler(this.buttonListBook_Click);
+            // 
+            // buttonOverTime
+            // 
+            this.buttonOverTime.AltKey = null;
+            this.buttonOverTime.CheckedGroup = null;
+            this.buttonOverTime.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonOverTime.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonOverTime.Image = ((System.Drawing.Image)(resources.GetObject("buttonOverTime.Image")));
+            this.buttonOverTime.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonOverTime.SmallImage")));
+            this.buttonOverTime.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonOverTime.Tag = null;
+            this.buttonOverTime.Text = "Quá hạn";
+            this.buttonOverTime.ToolTip = null;
+            this.buttonOverTime.ToolTipTitle = null;
+            this.buttonOverTime.Value = null;
+            this.buttonOverTime.Click += new System.EventHandler(this.buttonOverTime_Click);
+            // 
+            // buttonBorrowBook
+            // 
+            this.buttonBorrowBook.AltKey = null;
+            this.buttonBorrowBook.CheckedGroup = null;
+            this.buttonBorrowBook.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonBorrowBook.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonBorrowBook.Image = ((System.Drawing.Image)(resources.GetObject("buttonBorrowBook.Image")));
+            this.buttonBorrowBook.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBorrowBook.SmallImage")));
+            this.buttonBorrowBook.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonBorrowBook.Tag = null;
+            this.buttonBorrowBook.Text = "Tần suất";
+            this.buttonBorrowBook.ToolTip = null;
+            this.buttonBorrowBook.ToolTipTitle = null;
+            this.buttonBorrowBook.Value = null;
+            this.buttonBorrowBook.Click += new System.EventHandler(this.buttonBorrowBook_Click);
+            // 
+            // buttonReport
+            // 
+            this.buttonReport.AltKey = null;
+            this.buttonReport.CheckedGroup = null;
+            this.buttonReport.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonReport.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonReport.Image = ((System.Drawing.Image)(resources.GetObject("buttonReport.Image")));
+            this.buttonReport.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonReport.SmallImage")));
+            this.buttonReport.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonReport.Tag = null;
+            this.buttonReport.Text = "Báo cáo";
+            this.buttonReport.ToolTip = null;
+            this.buttonReport.ToolTipTitle = null;
+            this.buttonReport.Value = null;
+            // 
+            // buttonBackup
+            // 
+            this.buttonBackup.AltKey = null;
+            this.buttonBackup.CheckedGroup = null;
+            this.buttonBackup.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonBackup.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonBackup.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackup.Image")));
+            this.buttonBackup.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBackup.SmallImage")));
+            this.buttonBackup.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonBackup.Tag = null;
+            this.buttonBackup.Text = "Sao lưu";
+            this.buttonBackup.ToolTip = null;
+            this.buttonBackup.ToolTipTitle = null;
+            this.buttonBackup.Value = null;
+            // 
+            // buttonRestore
+            // 
+            this.buttonRestore.AltKey = null;
+            this.buttonRestore.CheckedGroup = null;
+            this.buttonRestore.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.buttonRestore.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.buttonRestore.Image = ((System.Drawing.Image)(resources.GetObject("buttonRestore.Image")));
+            this.buttonRestore.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonRestore.SmallImage")));
+            this.buttonRestore.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.buttonRestore.Tag = null;
+            this.buttonRestore.Text = "Khôi phục";
+            this.buttonRestore.ToolTip = null;
+            this.buttonRestore.ToolTipTitle = null;
+            this.buttonRestore.Value = null;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +530,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thư viện v.1 ";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -557,7 +561,7 @@
         private System.Windows.Forms.RibbonPanel ribbonPanel5;
         private System.Windows.Forms.RibbonButton buttonListBook;
         private System.Windows.Forms.RibbonButton buttonOverTime;
-        private System.Windows.Forms.RibbonButton buttonBorrowReader;
+        private System.Windows.Forms.RibbonButton buttonBorrowBook;
         private System.Windows.Forms.RibbonPanel ribbonPanel6;
         private System.Windows.Forms.RibbonButton buttonReport;
         private System.Windows.Forms.Ribbon ribbon1;

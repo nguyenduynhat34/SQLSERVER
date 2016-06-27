@@ -120,6 +120,7 @@ namespace QuanLyThuVien.v1
         private void buttonAddReader_Click(object sender, EventArgs e)
         {
             disableTextbox(false);
+            clearAlltextBox();
             buttonAddReader.Visible = false;
             buttonReaderEdit.Visible = false;
             buttonSaveReader.Visible = true;

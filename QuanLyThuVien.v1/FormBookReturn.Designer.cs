@@ -117,6 +117,7 @@
             this.buttonSave.TabIndex = 49;
             this.buttonSave.Text = "Lưu";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // panel4
             // 
@@ -361,6 +362,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(486, 273);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // qLTVDataSet
             // 
@@ -387,6 +389,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "FormBookReturn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBookReturn";
             this.Load += new System.EventHandler(this.FormBookReturn_Load);
             this.panel1.ResumeLayout(false);

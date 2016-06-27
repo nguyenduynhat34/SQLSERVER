@@ -358,6 +358,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormSpecBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSpecBook";
             this.Load += new System.EventHandler(this.FormSpecBook_Load);
             this.panelCondition.ResumeLayout(false);

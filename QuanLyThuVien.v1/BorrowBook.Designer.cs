@@ -472,6 +472,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(547, 184);
             this.dataGridView1.TabIndex = 39;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // qLTVDataSet
@@ -585,6 +586,7 @@
             this.Controls.Add(this.textBoxTicketID);
             this.Controls.Add(this.label1);
             this.Name = "BorrowBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BorrowBook";
             this.Load += new System.EventHandler(this.BorrowBook_Load);
             this.panel1.ResumeLayout(false);

@@ -450,6 +450,7 @@ namespace QuanLyThuVien.v1
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormBookManage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý sách";
             this.Load += new System.EventHandler(this.FormBookManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

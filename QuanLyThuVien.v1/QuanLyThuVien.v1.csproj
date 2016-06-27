@@ -63,6 +63,24 @@
     <Compile Include="BorrowBook.Designer.cs">
       <DependentUpon>BorrowBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportBookBorrow.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportBookBorrow.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportREADER.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportREADER.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,11 +105,23 @@
     <Compile Include="FormBook.Designer.cs">
       <DependentUpon>FormBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBookBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBookBorrow.Designer.cs">
+      <DependentUpon>FormBookBorrow.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBookManage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBookManage.Designer.cs">
       <DependentUpon>FormBookManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBookReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBookReport.Designer.cs">
+      <DependentUpon>FormBookReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBookReturn.cs">
       <SubType>Form</SubType>
@@ -99,11 +129,23 @@
     <Compile Include="FormBookReturn.Designer.cs">
       <DependentUpon>FormBookReturn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOverTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOverTime.Designer.cs">
+      <DependentUpon>FormOverTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReader.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormReader.Designer.cs">
       <DependentUpon>FormReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSpecBook.cs">
       <SubType>Form</SubType>
@@ -124,6 +166,18 @@
     <EmbeddedResource Include="BorrowBook.resx">
       <DependentUpon>BorrowBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportBookBorrow.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportBookBorrow.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportREADER.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportREADER.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,14 +190,26 @@
     <EmbeddedResource Include="FormBook.resx">
       <DependentUpon>FormBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBookBorrow.resx">
+      <DependentUpon>FormBookBorrow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBookManage.resx">
       <DependentUpon>FormBookManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBookReport.resx">
+      <DependentUpon>FormBookReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBookReturn.resx">
       <DependentUpon>FormBookReturn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOverTime.resx">
+      <DependentUpon>FormOverTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReader.resx">
       <DependentUpon>FormReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSpecBook.resx">
       <DependentUpon>FormSpecBook.cs</DependentUpon>
