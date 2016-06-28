@@ -56,21 +56,15 @@ namespace QuanLyThuVien.v1
 
         private void BorrowBook_Load(object sender, EventArgs e)
         {
-            // Specify a connection string. Replace the given value with a 
-            // valid connection string for a Northwind SQL Server sample
-            // database accessible to your system.
+           
             String connectionString = Program.connstr;
             String selectCommand = "Select * from PHIEUMUON";
 
-            // Create a new data adapter based on the specified query.
+           
             SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
 
-            // Create a command builder to generate SQL update, insert, and
-            // delete commands based on selectCommand. These are used to
-            // update the database.
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
 
-            // Populate a new data table and bind it to the BindingSource.
             DataTable table = new DataTable();
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             dataAdapter.Fill(table);
@@ -396,7 +390,24 @@ namespace QuanLyThuVien.v1
                 radioButtonOldBook1.Checked = false;
                 radioButtonOldBook2.Checked = false;
                 radioButtonOldBook3.Checked = false;
-            }             
+            }
+            reloadData();         
+        }
+
+        public void reloadData()
+        {
+            String connectionString = Program.connstr;
+            String selectCommand = "Select * from PHIEUMUON";
+
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+
+            DataTable table = new DataTable();
+            table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+            dataAdapter.Fill(table);
+            dataGridView1.DataSource = table;
         }
     }
 }

@@ -44,21 +44,14 @@ namespace QuanLyThuVien.v1
         {
             try
             {
-                // Specify a connection string. Replace the given value with a 
-                // valid connection string for a Northwind SQL Server sample
-                // database accessible to your system.
+
                 String connectionString = Program.connstr;
                 String selectCommand = "Select * from TACGIA";
 
-                // Create a new data adapter based on the specified query.
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
 
-                // Create a command builder to generate SQL update, insert, and
-                // delete commands based on selectCommand. These are used to
-                // update the database.
                 SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
 
-                // Populate a new data table and bind it to the BindingSource.
                 DataTable table = new DataTable();
                 table.Locale = System.Globalization.CultureInfo.InvariantCulture;
                 dataAdapter.Fill(table);
@@ -168,6 +161,7 @@ namespace QuanLyThuVien.v1
                     disableTextbox(true);
                 }
             }
+            reloadData();
         }
 
         private void buttonDeleteAuthor_Click(object sender, EventArgs e)
@@ -204,6 +198,7 @@ namespace QuanLyThuVien.v1
                 }
 
             }
+            reloadData();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -212,7 +207,7 @@ namespace QuanLyThuVien.v1
             disableTextbox(true);
 
             buttonSaveAuthor.Visible = false;
-            buttonCancel.Visible = false;
+            buttonCancel.Visible = true;
         }
 
         private void disableTextbox(bool bl) 
@@ -231,6 +226,20 @@ namespace QuanLyThuVien.v1
             textBoxAuthorPhone.Text = "";
         }
 
+        public void reloadData()
+        {
+            String connectionString = Program.connstr;
+            String selectCommand = "Select * from TACGIA";
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+
+            DataTable table = new DataTable();
+            table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+            dataAdapter.Fill(table);
+            dataGridView1.DataSource = table;
+        }
 
     }
 }

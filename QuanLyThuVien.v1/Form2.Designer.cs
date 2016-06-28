@@ -61,7 +61,7 @@
             this.buttonOverTime = new System.Windows.Forms.RibbonButton();
             this.buttonBorrowBook = new System.Windows.Forms.RibbonButton();
             this.buttonReport = new System.Windows.Forms.RibbonButton();
-            this.buttonBackup = new System.Windows.Forms.RibbonButton();
+            this.btnBackup = new System.Windows.Forms.RibbonButton();
             this.buttonRestore = new System.Windows.Forms.RibbonButton();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -181,7 +181,7 @@
             // 
             // ribbonPanel4
             // 
-            this.ribbonPanel4.Items.Add(this.buttonBackup);
+            this.ribbonPanel4.Items.Add(this.btnBackup);
             this.ribbonPanel4.Items.Add(this.buttonRestore);
             this.ribbonPanel4.Tag = null;
             this.ribbonPanel4.Text = "Sao lưu và khôi phục";
@@ -490,20 +490,21 @@
             this.buttonReport.ToolTipTitle = null;
             this.buttonReport.Value = null;
             // 
-            // buttonBackup
+            // btnBackup
             // 
-            this.buttonBackup.AltKey = null;
-            this.buttonBackup.CheckedGroup = null;
-            this.buttonBackup.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
-            this.buttonBackup.DropDownArrowSize = new System.Drawing.Size(5, 3);
-            this.buttonBackup.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackup.Image")));
-            this.buttonBackup.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonBackup.SmallImage")));
-            this.buttonBackup.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
-            this.buttonBackup.Tag = null;
-            this.buttonBackup.Text = "Sao lưu";
-            this.buttonBackup.ToolTip = null;
-            this.buttonBackup.ToolTipTitle = null;
-            this.buttonBackup.Value = null;
+            this.btnBackup.AltKey = null;
+            this.btnBackup.CheckedGroup = null;
+            this.btnBackup.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Down;
+            this.btnBackup.DropDownArrowSize = new System.Drawing.Size(5, 3);
+            this.btnBackup.Image = ((System.Drawing.Image)(resources.GetObject("btnBackup.Image")));
+            this.btnBackup.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnBackup.SmallImage")));
+            this.btnBackup.Style = System.Windows.Forms.RibbonButtonStyle.Normal;
+            this.btnBackup.Tag = null;
+            this.btnBackup.Text = "Sao lưu";
+            this.btnBackup.ToolTip = null;
+            this.btnBackup.ToolTipTitle = null;
+            this.btnBackup.Value = null;
+            this.btnBackup.DoubleClick += new System.EventHandler(this.btnBackup_Click);
             // 
             // buttonRestore
             // 
@@ -519,6 +520,7 @@
             this.buttonRestore.ToolTip = null;
             this.buttonRestore.ToolTipTitle = null;
             this.buttonRestore.Value = null;
+            this.buttonRestore.Click += new System.EventHandler(this.buttonRestore_Click);
             // 
             // Form2
             // 
@@ -556,7 +558,7 @@
         private System.Windows.Forms.RibbonButton buttonBorrow;
         private System.Windows.Forms.RibbonButton buttonReturn;
         private System.Windows.Forms.RibbonPanel ribbonPanel4;
-        private System.Windows.Forms.RibbonButton buttonBackup;
+        private System.Windows.Forms.RibbonButton btnBackup;
         private System.Windows.Forms.RibbonButton buttonRestore;
         private System.Windows.Forms.RibbonPanel ribbonPanel5;
         private System.Windows.Forms.RibbonButton buttonListBook;

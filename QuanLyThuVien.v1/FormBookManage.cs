@@ -55,30 +55,16 @@ namespace QuanLyThuVien.v1
         {
             try
             {
-                // Specify a connection string. Replace the given value with a 
-                // valid connection string for a Northwind SQL Server sample
-                // database accessible to your system.
+
                 SqlConnection conn = Program.conn;
                 String connectionString = Program.connstr;
                 String selectCommand = "SELECT ISBN.ISBN, TENSACH, KHOSACH, NOIDUNG, HINHANHPATH, NGAYXUATBAN, LANXUATBAN, SOTRANG, GIA, NHAXB, MANGONNGU, MATL, MATACGIA FROM[QLTV].[dbo].[ISBN], [QLTV].[dbo].[TACGIA_SACH] WHERE ISBN.ISBN = TACGIA_SACH.ISBN";
-                //String selectCommand = "SELECT * FROM ISBN";
-                // Create a new data adapter based on the specified query.
+
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
 
-                //DataSet ds = new DataSet();
-                //conn.Open();
-                //dataAdapter.Fill(ds, "account");
-                //conn.Close();
-                //dataGridView1.DataSource = ds;
 
-
-                // Create a command builder to generate SQL update, insert, and
-                // delete commands based on selectCommand. These are used to
-                // update the database.
-                
                 SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
 
-                // Populate a new data table and bind it to the BindingSource.
                 DataTable table = new DataTable();
                 table.Locale = System.Globalization.CultureInfo.InvariantCulture;
                 dataAdapter.Fill(table);
@@ -265,6 +251,7 @@ namespace QuanLyThuVien.v1
                 {
                     conn.Close();
                 }
+                reloadData();
             }
 
             this.Refresh();
@@ -355,8 +342,25 @@ namespace QuanLyThuVien.v1
                 }
                 
             }
+            reloadData();
 
-            
+        }
+
+        public void reloadData()
+        {
+            SqlConnection conn = Program.conn;
+            String connectionString = Program.connstr;
+            String selectCommand = "SELECT ISBN.ISBN, TENSACH, KHOSACH, NOIDUNG, HINHANHPATH, NGAYXUATBAN, LANXUATBAN, SOTRANG, GIA, NHAXB, MANGONNGU, MATL, MATACGIA FROM[QLTV].[dbo].[ISBN], [QLTV].[dbo].[TACGIA_SACH] WHERE ISBN.ISBN = TACGIA_SACH.ISBN";
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
+
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+
+            DataTable table = new DataTable();
+            table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+            dataAdapter.Fill(table);
+            dataGridView1.DataSource = table;
         }
     }
 }

@@ -136,6 +136,27 @@ namespace QuanLyThuVien.v1
             FormBookBorrow form = new FormBookBorrow();
             form.Show();
         }
+    
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == typeof(FormBackup))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            FormBackup form = new FormBackup();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void buttonRestore_Click(object sender, EventArgs e)
+        {
+            FormRestore form = new FormRestore();
+                form.Show();
+        }
     }
  }
 
