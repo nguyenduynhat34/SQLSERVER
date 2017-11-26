@@ -58,7 +58,7 @@ namespace QuanLyThuVien.v1
         {
            
             String connectionString = Program.connstr;
-            String selectCommand = "Select * from PHIEUMUON";
+            String selectCommand = "Select * from PHIEUMUON ORDER BY MAPHIEU DESC";
 
            
             SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
@@ -137,6 +137,8 @@ namespace QuanLyThuVien.v1
             bookNew2 = radioButtonNewBook2.Checked;
             bookNew3 = radioButtonNewBook3.Checked;
 
+            SqlDataReader reader = null;
+
             if (value == 1)
             {
                 SqlConnection conn = new SqlConnection();
@@ -146,6 +148,17 @@ namespace QuanLyThuVien.v1
                 Mytransaction = conn.BeginTransaction();
                 try
                 {
+                    //Check MADOCGIA exist
+                    String query = "SELECT * FROM [QLTV].[dbo].[DOCGIA] WHERE [dbo].[DOCGIA].MADG = '" + readerID + "'";
+                    reader = Program.ExecSqlDataReader(query, null);
+                    if (!reader.HasRows)
+                    {
+                        throw new Exception(Message.E008 + Params.MA_DOC_GIA);
+                    }
+                    if (reader != null)
+                    {
+                        reader.Close();
+                    }
 
                     SqlCommand cmd = new SqlCommand("SP_THEMPHIEUMUON", conn, Mytransaction);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -163,6 +176,18 @@ namespace QuanLyThuVien.v1
 
                     if (bookID1 != "")
                     {
+                        //Check bookId exist
+                        query = "SELECT * FROM [QLTV].[dbo].[SACH] WHERE [dbo].[SACH].MASACH = '" + bookID1 + "'";
+                        reader = Program.ExecSqlDataReader(query, null);
+                        if (!reader.HasRows)
+                        {
+                            throw new Exception(Message.E008 + Params.MA_SACH);
+                        }
+                        if (reader != null)
+                        {
+                            reader.Close();
+                        }
+
                         cmd.Dispose();
                         cmd = new SqlCommand("SP_THEMCTPHIEUMUON", conn, Mytransaction);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -177,6 +202,18 @@ namespace QuanLyThuVien.v1
                     }
                     if (bookID2 != "")
                     {
+                        //Check bookId exist
+                        query = "SELECT * FROM [QLTV].[dbo].[SACH] WHERE [dbo].[SACH].MASACH = '" + bookID1 + "'";
+                        reader = Program.ExecSqlDataReader(query, null);
+                        if (!reader.HasRows)
+                        {
+                            throw new Exception(Message.E008 + Params.MA_SACH);
+                        }
+                        if (reader != null)
+                        {
+                            reader.Close();
+                        }
+
                         cmd.Dispose();
                         cmd = new SqlCommand("SP_THEMCTPHIEUMUON", conn, Mytransaction);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -190,6 +227,18 @@ namespace QuanLyThuVien.v1
                     }
                     if (bookID3 != "")
                     {
+                        //Check bookId exist
+                        query = "SELECT * FROM [QLTV].[dbo].[SACH] WHERE [dbo].[SACH].MASACH = '" + bookID1 + "'";
+                        reader = Program.ExecSqlDataReader(query, null);
+                        if (!reader.HasRows)
+                        {
+                            throw new Exception(Message.E008 + Params.MA_SACH);
+                        }
+                        if (reader != null)
+                        {
+                            reader.Close();
+                        }
+
                         cmd.Dispose();
                         cmd = new SqlCommand("SP_THEMCTPHIEUMUON", conn, Mytransaction);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -213,6 +262,12 @@ namespace QuanLyThuVien.v1
                 {
                     Mytransaction.Rollback();
                     MessageBox.Show(ex.Message);
+                } finally
+                {
+                    if(reader != null)
+                    {
+                        reader.Close();
+                    }
                 }
             }
             else if (value == 2)

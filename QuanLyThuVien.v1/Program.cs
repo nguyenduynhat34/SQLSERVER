@@ -41,7 +41,7 @@ namespace QuanLyThuVien.v1
 
             catch (Exception e)
             {
-                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu.\nBạn xem lại user name và password.\n " + e.Message, "", MessageBoxButtons.OK);
+                MessageBox.Show(Message.E002 + e.Message, "", MessageBoxButtons.OK);
                 return 0;
             }
         }
@@ -49,6 +49,7 @@ namespace QuanLyThuVien.v1
         public static SqlDataReader ExecSqlDataReader(String cmd, String connectionstring)
         {
             SqlDataReader myreader;
+
             //Program.conn = new SqlConnection(connectionstring);
 
             SqlCommand sqlcmd = new SqlCommand();

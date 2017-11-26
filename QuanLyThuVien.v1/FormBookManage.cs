@@ -148,7 +148,6 @@ namespace QuanLyThuVien.v1
 
         private void buttonSaveBook_Click(object sender, EventArgs e)
         {
-
             ISBN = textBoxBookID.Text;
             bookName = textBoxBookName.Text;
             bookSize = textBoxBookSize.Text;
@@ -168,7 +167,35 @@ namespace QuanLyThuVien.v1
             {
                 try
                 {
-                    
+                    if (String.IsNullOrEmpty(ISBN) || ISBN.Length > 10)
+                    {
+                        throw new Exception(Message.E005 + Params.ISBN);
+                    }
+                    if (String.IsNullOrEmpty(bookName) || bookName.Length > 100)
+                    {
+                        throw new Exception(Message.E005 + Params.TEN_SACH);
+                    }
+                    if (String.IsNullOrEmpty(authorID))
+                    {
+                        throw new Exception(Message.E005 + Params.MA_TAC_GIA);
+                    }
+                    if (String.IsNullOrEmpty(langID))
+                    {
+                        throw new Exception(Message.E005 + Params.MA_NGON_NGU);
+                    }
+                    if (String.IsNullOrEmpty(bookTypeID))
+                    {
+                        throw new Exception(Message.E005 + Params.MA_THE_LOAI);
+                    }
+
+                    //Check ISBN code exist
+                    String query =  "SELECT * FROM [QLTV].[dbo].[ISBN] WHERE [dbo].[ISBN].ISBN = '" + ISBN +"'";
+                    SqlDataReader reader = Program.ExecSqlDataReader(query, null);
+                    if (reader.HasRows)
+                    {
+                        throw new Exception(Message.E006 + Params.ISBN);
+                    }
+
                     SqlCommand cmd = new SqlCommand("SP_THEMDAUSACH", conn);
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -215,6 +242,23 @@ namespace QuanLyThuVien.v1
             {
                 try
                 {
+                    if (String.IsNullOrEmpty(bookName) || bookName.Length > 100)
+                    {
+                        throw new Exception(Message.E005 + Params.TEN_SACH);
+                    }
+                    if (String.IsNullOrEmpty(authorID))
+                    {
+                        throw new Exception(Message.E005 + Params.MA_TAC_GIA);
+                    }
+                    if (String.IsNullOrEmpty(langID))
+                    {
+                        throw new Exception(Message.E005 + Params.MA_NGON_NGU);
+                    }
+                    if (String.IsNullOrEmpty(bookTypeID))
+                    {
+                        throw new Exception(Message.E005 + Params.MA_THE_LOAI);
+                    }
+
                     SqlCommand cmd = new SqlCommand("SP_SUADAUSACH", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 

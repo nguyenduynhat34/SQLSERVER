@@ -120,11 +120,43 @@ namespace QuanLyThuVien.v1
             bookCaseID = textBoxBookcaseId.Text;
             condition = radioButtonNew.Checked;
             borrowed = radioButtonRentted.Checked;
+            SqlDataReader reader = null;
 
             if (value == 1)
             {
                 try
                 {
+                    if (String.IsNullOrEmpty(bookISBN))
+                    {
+                        throw new Exception(Message.E005 + Params.ISBN);
+                    }
+                    if (String.IsNullOrEmpty(bookSpecID) || bookSpecID.Length > 10)
+                    {
+                        throw new Exception(Message.E005 + Params.MA_SACH);
+                    }
+                    if (String.IsNullOrEmpty(bookCaseID))
+                    {
+                        throw new Exception(Message.E005 + Params.MA_NGAN_TU);
+                    }
+
+                    //Check ISBN code exist
+                    String query = "SELECT * FROM [QLTV].[dbo].[ISBN] WHERE [dbo].[ISBN].ISBN = '" + bookISBN + "'";
+
+                    reader = Program.ExecSqlDataReader(query, null);
+                    if (!reader.HasRows)
+                    {
+                        throw new Exception(Message.E008 + Params.ISBN);
+                    }
+                    reader.Close();
+
+                    //Check Masach code exist
+                    query = "SELECT * FROM [QLTV].[dbo].[SACH] WHERE [dbo].[SACH].MASACH = '" + bookSpecID + "'";
+                    reader = Program.ExecSqlDataReader(query, null);
+                    if (reader.HasRows)
+                    {
+                        throw new Exception(Message.E006 + Params.MA_SACH);
+                    }
+
                     SqlConnection conn = new SqlConnection();
                     conn.ConnectionString = Program.connstr;
                     conn.Open();
@@ -144,11 +176,22 @@ namespace QuanLyThuVien.v1
                 {
                     MessageBox.Show(ex.Message);
                 }
+                finally
+                {
+                    if (reader != null)
+                    {
+                        reader.Close();
+                    }
+                }
             }
             else if (value == 2)
             {
                 try
                 {
+                    if (String.IsNullOrEmpty(bookCaseID))
+                    {
+                        throw new Exception(Message.E005 + Params.MA_NGAN_TU);
+                    }
                     SqlConnection conn = new SqlConnection();
                     conn.ConnectionString = Program.connstr;
                     conn.Open();
